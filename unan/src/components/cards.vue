@@ -82,22 +82,7 @@
 </template>
 
 <script>
-new Vue({
-  el: '#cardex',
-  vuetify: new Vuetify(),
-  data: () => ({
-    loading: false,
-    selection: 1,
-  }),
 
-  methods: {
-    reserve () {
-      this.loading = true
-
-      setTimeout(() => (this.loading = false), 2000)
-    },
-  },
-})
 </script>
 
 <style lang="scss" scoped>
