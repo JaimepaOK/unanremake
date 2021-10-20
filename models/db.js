@@ -11,6 +11,7 @@ const config = {
 const pool = new Pool(config);
 
 const getNombres = async() => {
+
     try {
         const res = await pool.query('select nombre from cunan order by "ID"');
         console.log(res.rows);
@@ -20,3 +21,5 @@ const getNombres = async() => {
     }
 
 };
+
+module.exports = { getNombres };
