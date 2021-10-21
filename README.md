@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-# Unan_Page_Proyect
-Proyecto de reconstrucción de la pagina principal de UNAN - León
-=======
 # unanremake
 
 ## Project setup
@@ -26,4 +22,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> Stashed changes
