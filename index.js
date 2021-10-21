@@ -1,24 +1,18 @@
-const express = require('express');
-const dotenv = require('dotenv');
-
+const express = require("express");
+const dotenv = require("dotenv");
 
 const app = express();
 dotenv.config();
 
 const PORT = process.env.PORT;
 
-
-app.get('/', (req, res) => {
-    res.sendFile('/public/index.html', { root: __dirname });
-
+app.get("/", (req, res) => {
+  res.sendFile("/public/index.html", { root: __dirname });
 });
-
 
 app.listen(PORT, () => {
-    console.log(`Funcionando en el puerto: ${PORT}`);
+  console.log(`Funcionando en el puerto: ${PORT}`);
 });
-
-
 
 /*const server = http.createServer((req, res) => {
     if (req.url === '/') {
