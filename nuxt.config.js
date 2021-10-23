@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Unan-remake',
+    title: 'Universidad Nacional Autonoma de Nicaragua, Unan-León',
     htmlAttrs: {
       lang: 'en'
     },

@@ -124,12 +124,13 @@ body{
 }
 .navbar{
 	padding: 0;
+
 }
 .navbar-brand img{
-	height: 28px;
+	height: 50px;
 	width: auto;
 	display: block;
-  filter: brightness(10%);
+
 	-webkit-transition : all 0.3s ease-out;
 	transition : all 0.3s ease-out;
 }
@@ -217,7 +218,7 @@ body{
 ================================================== */
 
 .bg-light {
-	background-color: #fff !important;
+	background-color: rgb(255, 255, 255) !important;
     transition: all 200ms linear;
 }
 .section {
@@ -225,9 +226,9 @@ body{
 	width: 100%;
 	display: block;
 }
-/*.full-height {
+.full-height {
     height: 100vh;
-}*/
+}
 .over-hide {
     overflow: hidden;
 }
@@ -576,25 +577,6 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* #Link to page
 ================================================== */
-
-.logo {
-	position: absolute;
-	bottom: 30px;
-	right: 30px;
-	display: block;
-	z-index: 100;
-	transition: all 250ms linear;
-}
-.logo img {
-	height: 26px;
-	width: auto;
-	display: block;
-  filter: brightness(10%);
-	transition: all 250ms linear;
-}
-body.dark .logo img {
-  filter: brightness(100%);
-}
 
 </style>
 
