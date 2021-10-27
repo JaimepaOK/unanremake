@@ -4,14 +4,16 @@ const dotenv = require("dotenv");
 const app = express();
 dotenv.config();
 
-const PORT = process.env.PORT;
 
-app.get("/", (req, res) => {
-  res.sendFile("/public/index.html", { root: __dirname });
-});
+const posts = require('./controllers/data.js');
+app.use('/data/nombres', posts);
+
+const PORT = process.env.PORT || 5000;
+
+
 
 app.listen(PORT, () => {
-  console.log(`Funcionando en el puerto: ${PORT}`);
+    console.log(`Funcionando en el puerto: ${PORT}`);
 });
 
 /*const server = http.createServer((req, res) => {
