@@ -1,28 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const mongodb = require("mongodb");
 
-const app = express();
-dotenv.config();
-
-
-const posts = require('./controllers/data.js');
-app.use('/data/nombres', posts);
-
+//port
 const PORT = process.env.PORT || 5000;
 
+const app = express();
 
 
 app.listen(PORT, () => {
     console.log(`Funcionando en el puerto: ${PORT}`);
 });
-
-/*const server = http.createServer((req, res) => {
-    if (req.url === '/') {
-        res.end('this should be a index.html')
-    }
-    res.end(`<h1> ¡OPA! </h1>
-    <a href="/">home</a>
-    `)
-})
-
-server.listen(5000)*/
