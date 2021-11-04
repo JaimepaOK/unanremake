@@ -4,37 +4,9 @@
 ================================================== */
 
 :root {
-    --blue: #007bff;
     --blueunan: #2a3686;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --redunan: #930a18;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
     --yellowunan: #fcde45;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --redunan: #930a18;
 }
 
 body {
@@ -43,6 +15,7 @@ body {
     line-height: 24px;
     font-weight: 400;
     color: #212112;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
     background-position: center;
     background-repeat: repeat;
     background-size: 7%;
@@ -53,12 +26,12 @@ body {
 
 ::selection {
     color: #fff;
-    background-color: var(--blueunan);
+    background-color: #8167a9;
 }
 
 ::-moz-selection {
     color: #fff;
-    background-color: var(--blueunan);
+    background-color: #8167a9;
 }
 
 
@@ -98,13 +71,18 @@ body {
 }
 
 .navbar {
-    padding: 10px 30px 10px 20px;
+    padding: 0;
+}
+
+.navbar-collapse {
+    margin: 10px;
 }
 
 .navbar-brand img {
-    height: 50px;
+    height: 28px;
     width: auto;
     display: block;
+    filter: brightness(10%);
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
@@ -159,14 +137,14 @@ body {
 }
 
 .nav-link {
-    color: #212121 !important;
-    font-weight: 400;
+    color: #930a18 !important;
+    font-weight: 500;
     margin: 10px;
     transition: all 200ms linear;
 }
 
 .nav-item:hover .nav-link {
-    color: var(--blueunan) !important;
+    color: #8167a9 !important;
 }
 
 .nav-item.active .nav-link {
@@ -186,7 +164,7 @@ body {
     width: 100%;
     height: 2px;
     content: '';
-    background-color: var(--blueunan);
+    background-color: #8167a9;
     opacity: 0;
     transition: all 200ms linear;
 }
@@ -210,7 +188,7 @@ body {
 ================================================== */
 
 .bg-light {
-    background-color: rgb(255, 255, 255) !important;
+    background-color: #fff !important;
     transition: all 200ms linear;
 }
 
@@ -414,7 +392,7 @@ h1 span:nth-child(15) {
 #switch {
     width: 60px;
     height: 8px;
-    border: 2px solid var(--blueunan);
+    border: 2px solid #8167a9;
     border-radius: 27px;
     background: #000;
     position: relative;
@@ -445,7 +423,7 @@ body.hero-anime #switch {
 
 .switched {
     border-color: #000 !important;
-    background: var(--blueunan) !important;
+    background: #8167a9 !important;
 }
 
 .switched #circle {
@@ -481,7 +459,7 @@ body.hero-anime #switch {
     background-color: #fcfaff;
     border: none;
     border-radius: 3px;
-    box-shadow: 0 5px 10px 0 rgba(140, 138, 165, 0.15);
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
     transition: all 200ms linear;
 }
 
@@ -499,7 +477,7 @@ body.hero-anime #switch {
 .dropdown-item:hover,
 .dropdown-item:focus {
     color: #fff;
-    background-color: rgba(41, 54, 134, 0.6);
+    background-color: rgba(129, 103, 169, .6);
 }
 
 body.dark {
@@ -632,3 +610,24 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* #Link to page
 ================================================== */
+
+.logo {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: block;
+    z-index: 100;
+    transition: all 250ms linear;
+}
+
+.logo img {
+    height: 26px;
+    width: auto;
+    display: block;
+    filter: brightness(10%);
+    transition: all 250ms linear;
+}
+
+body.dark .logo img {
+    filter: brightness(100%);
+}
