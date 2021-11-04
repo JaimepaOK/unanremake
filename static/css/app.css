@@ -26,12 +26,12 @@ body {
 
 ::selection {
     color: #fff;
-    background-color: #8167a9;
+    background-color: var(--blueunan);
 }
 
 ::-moz-selection {
     color: #fff;
-    background-color: #8167a9;
+    background-color: var(--blueunan);
 }
 
 
@@ -144,11 +144,11 @@ body {
 }
 
 .nav-item:hover .nav-link {
-    color: #8167a9 !important;
+    color: var(--blueunan) !important;
 }
 
 .nav-item.active .nav-link {
-    color: #777 !important;
+    color: rgb(228, 224, 224) !important;
 }
 
 .nav-link {
@@ -164,7 +164,7 @@ body {
     width: 100%;
     height: 2px;
     content: '';
-    background-color: #8167a9;
+    background-color: var(--blueunan);
     opacity: 0;
     transition: all 200ms linear;
 }
@@ -392,7 +392,7 @@ h1 span:nth-child(15) {
 #switch {
     width: 60px;
     height: 8px;
-    border: 2px solid #8167a9;
+    border: 2px solid var(--blueunan);
     border-radius: 27px;
     background: #000;
     position: relative;
@@ -423,12 +423,12 @@ body.hero-anime #switch {
 
 .switched {
     border-color: #000 !important;
-    background: #8167a9 !important;
+    background: var(--blueunan) !important;
 }
 
 .switched #circle {
     left: 43px;
-    box-shadow: 0 4px 4px rgba(26, 53, 71, 0.25), 0 0 0 1px rgba(26, 53, 71, 0.07);
+    box-shadow: 0 4px 4px rgba(41, 53, 134, 0.7), 0 0 0 1px rgbrgba(41, 54, 134, 0.7);
     background: #fff;
 }
 
@@ -459,7 +459,7 @@ body.hero-anime #switch {
     background-color: #fcfaff;
     border: none;
     border-radius: 3px;
-    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    box-shadow: 0 5px 10px 0 rgba(41, 53, 134, 0.70);
     transition: all 200ms linear;
 }
 
@@ -477,7 +477,7 @@ body.hero-anime #switch {
 .dropdown-item:hover,
 .dropdown-item:focus {
     color: #fff;
-    background-color: rgba(129, 103, 169, .6);
+    background-color: rgba(41, 54, 134, 0.70);
 }
 
 body.dark {
@@ -630,4 +630,17 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 body.dark .logo img {
     filter: brightness(100%);
+}
+
+.form-control {
+    background: #212529;
+    border-color: #545454;
+}
+
+.form-control:focus {
+    background: #212529;
+}
+
+footer {
+    background: #212529;
 }

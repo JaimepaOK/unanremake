@@ -1,6 +1,27 @@
-<template>
-<div>
-    <footer class="footer-10">
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Footer 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap" rel="stylesheet">
+	
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6 text-center">
+						<h2>Footer #10</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer-10">
 			<div class="container">
 				<div class="row mb-5 pb-3 no-gutters">
 					<div class="col-md-4 mb-md-0 mb-4 d-flex">
@@ -84,7 +105,9 @@
 				</div>
 				<div class="row mt-5 pt-4 border-top">
           <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
-            
+            <p class="copyright mb-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved. | This template is made with <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
           <div class="col-md-6 col-lg-4 text-md-right">
           	<ul class="ftco-footer-social p-0">
@@ -96,191 +119,10 @@
         </div>
 			</div>
 		</footer>
-</div>
-</template>
 
-<style lang="scss">
-
-//COVER BG
-.img,
-.blog-img,
-.user-img{
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-.ftco-footer-social {
-	li {
-		list-style: none;
-		margin: 0 10px 0 0;
-		display: inline-block;
-		a {
-			height: 40px;
-			width: 40px;
-			display: block;
-			background: rgba($black, .05);
-			border-radius: 50%;
-			position: relative;
-			span {
-				position: absolute;
-				font-size: 20px;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			&:hover {
-				color: $white;
-			}
-		}
-	}
-}
-
-
-//FORM CONTROL
-.form-control {
-	height: 52px;
-	background: $white;
-	color: $black;
-	font-size: 18px;
-	border-radius: 0px;
-	box-shadow: none;
-	border: 1px solid rgba(0,0,0,.1);
-	&:focus, &:active {
-		outline: none !important;
-		box-shadow: none;
-	}
-}
-textarea.form-control {
-	height: inherit!important;
-}
-
-.ftco-section{
-	padding: 12em 0;
-	h2{
-		margin-bottom: 0;
-	}
-}
-
-footer{
-	padding: 7em 0;
-}
-
-//FOOTER 10
-.footer-10{
-	background: #222222;
-	padding: 0 0 4em 0;
-	.border-top, .border-bottom{
-		border-color: rgba(255,255,255,.1) !important;
-	}
-	.footer-heading{
-		font-size: 18px;
-		color: $white;
-		margin-bottom: 30px;
-	}
-	p{
-		color: rgba(255,255,255,.3);
-	}
-	a{
-		color: $primary;
-	}
-	.con{
-		&.con-1{
-			background: darken(#222222,1.5%);
-		}
-		&.con-2{
-			background: darken(#222222,2.5%);
-		}
-		&.con-3{
-			background: lighten(#222222,1%);
-		}
-	}
-	.list-unstyled{
-		li{
-			a{
-				color: rgba(255,255,255,.2);
-				&:hover{
-					color: $white;
-				}
-			}
-		}
-	}
-	.con-info{
-		.icon{
-			width: 50px;
-			height: 50px;
-			background: $primary;
-			border-radius: 50%;
-			margin: 0 auto;
-			margin-bottom: 10px;
-			span{
-				color: $white;
-				font-size: 24px;
-			}
-		}
-		span{
-			color: rgba(255,255,255,.8);
-		}
-	}
-	.subscribe-form{
-		.form-group {
-			position: relative;
-			margin-bottom: 0;
-			@include border-radius(0);
-			input {
-				background: rgba(255,255,255,1) !important;
-				border: none !important;
-				outline : none !important;
-				color: rgba(0,0,0,.3) !important;
-				font-size: 16px;
-				@include border-radius(0);
-				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&::-moz-placeholder { /* Firefox 19+ */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&:-ms-input-placeholder { /* IE 10+ */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&:-moz-placeholder { /* Firefox 18- */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&:focus{
-					outline: none !important;
-					box-shadow: none;
-				}
-			}
-			.submit{
-				color: $white !important;
-				display: block;
-				width: 130px;
-				height: 52px;
-				font-size: 16px;
-				background: $primary !important;
-				border: none;
-				@include border-radius(0);
-				&:hover, &:focus{
-					text-decoration: none !important;
-					outline: none !important;
-				}
-			}
-		}
-		.subheading{
-			display: inline-block;
-			margin-top: 5px;
-			color: rgba(255,255,255,.3);
-			font-size: 13px;
-		}
-	}
-	.ftco-footer-social{
-		li{
-			a{
-				background: rgba(255,255,255,.1);
-				color: $white;
-			}
-		}
-	}
-}
-
-</style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

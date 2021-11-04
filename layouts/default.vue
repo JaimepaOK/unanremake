@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header />
+    <Header> </Header>
     <div>
-      <Nuxt/>
+      <Nuxt> </Nuxt>
     </div>
     <Footer />
   </div>
@@ -15,13 +15,13 @@ import Footer from '../components/utils/footer.vue'
 export default {
   components: {
     Header,
-    Footer
+    Footer,
   },
   head: {
     bodyAttrs: {
-      class: 'hero-anime'
-    }
-  }
+      class: 'hero-anime',
+    },
+  },
 }
 </script>
 
