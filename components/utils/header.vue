@@ -3,11 +3,7 @@
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-collapse id="nav-collapse" is-nav>
         <NuxtLink to="/">
-          <img
-            src="https://i.ibb.co/Nsq3hGd/escudoazul.png"
-            alt="escudoazul"
-            border="0"
-          />
+          <img src="https://i.ibb.co/DLj4J6G/topleft22.png" alt="topleft22" border="0">
         </NuxtLink>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
@@ -75,7 +71,7 @@ export default {
         { info: 'RELACIONES EXTERNAS' },
       ],
       items2: [
-        { data: 'Consejo Universitario', ref: 'about' },
+        { data: 'Consejo Universitario', ref: 'consejoU' },
         { data: 'Reseña Histórica', ref: '#' },
         { data: 'Misión y Visión', ref: '#' },
         { data: 'Gaceta Universitaria', ref: '#' },
@@ -159,8 +155,10 @@ export default {
 </script>
 
 <style scoped>
+
+
 img {
-  width: 130px;
+  width: 120px;
   height: auto;
 }
 .bg-info {

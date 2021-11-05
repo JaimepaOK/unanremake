@@ -225,17 +225,12 @@ h1 {
 }
 
 p {
-    text-align: center;
-    margin: 0;
-    padding-top: 10px;
-    opacity: 1;
     transform: translate(0);
     transition: all 300ms linear;
     transition-delay: 1700ms;
 }
 
 body.hero-anime p {
-    opacity: 0;
     transform: translateY(40px);
     transition-delay: 1700ms;
 }
@@ -643,4 +638,10 @@ body.dark .logo img {
 
 footer {
     background: #212529;
+    color: #fff;
+}
+
+.footer-copyright {
+    margin-top: 50px;
+    background-color: #1b1e22;
 }

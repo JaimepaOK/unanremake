@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header> </Header>
+    <Sidebar></Sidebar>
     <div>
       <Nuxt> </Nuxt>
     </div>
@@ -11,17 +12,14 @@
 <script>
 import Header from '../components/utils/header.vue'
 import Footer from '../components/utils/footer.vue'
+import Sidebar from '../components/utils/sidebar.vue'
 
 export default {
   components: {
     Header,
     Footer,
-  },
-  head: {
-    bodyAttrs: {
-      class: 'hero-anime',
-    },
-  },
+    Sidebar,
+  }
 }
 </script>
 

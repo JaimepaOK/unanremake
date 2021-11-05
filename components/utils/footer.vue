@@ -1,286 +1,117 @@
 <template>
-<div>
-    <footer class="footer-10">
-			<div class="container">
-				<div class="row mb-5 pb-3 no-gutters">
-					<div class="col-md-4 mb-md-0 mb-4 d-flex">
-						<div class="con con-1 w-100 py-5">
-							<div class="con-info w-100 text-center">
-								<div class="icon d-flex align-items-center justify-content-center">
-									<span class="ion-ios-call"></span>
-								</div>
-								<div class="text">
-									<span>(+00) 1234 5678</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 mb-md-0 mb-4 d-flex">
-						<div class="con con-2 w-100 py-5">
-							<div class="con-info w-100 text-center">
-								<div class="icon d-flex align-items-center justify-content-center">
-									<span class="ion-ios-mail"></span>
-								</div>
-								<div class="text">
-									<span>info@email.com</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 mb-md-0 mb-4 d-flex">
-						<div class="con con-3 w-100 py-5">
-							<div class="con-info w-100 text-center">
-								<div class="icon d-flex align-items-center justify-content-center">
-									<span class="ion-ios-pin"></span>
-								</div>
-								<div class="text">
-									<span>203 Fake St. Mountain View, San Francisco, California, USA</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-7">
-						<div class="row">
-							<div class="col-md-4 mb-md-0 mb-4">
-								<h2 class="footer-heading">About</h2>
-								<ul class="list-unstyled">
-		              <li><a href="#" class="d-block">Out story</a></li>
-		              <li><a href="#" class="d-block">Awards</a></li>
-		              <li><a href="#" class="d-block">Our Team</a></li>
-		              <li><a href="#" class="d-block">Career</a></li>
-		            </ul>
-							</div>
-							<div class="col-md-4 mb-md-0 mb-4">
-								<h2 class="footer-heading">Company</h2>
-								<ul class="list-unstyled">
-		              <li><a href="#" class="d-block">Our services</a></li>
-		              <li><a href="#" class="d-block">Clients</a></li>
-		              <li><a href="#" class="d-block">Contact</a></li>
-		              <li><a href="#" class="d-block">Press</a></li>
-		            </ul>
-							</div>
-							<div class="col-md-4 mb-md-0 mb-4">
-								<h2 class="footer-heading">Resources</h2>
-								<ul class="list-unstyled">
-		              <li><a href="#" class="d-block">Blog</a></li>
-		              <li><a href="#" class="d-block">Newsletter</a></li>
-		              <li><a href="#" class="d-block">Privacy Policy</a></li>
-		            </ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-5 mb-md-0 mb-4">
-						<h2 class="footer-heading">Subscribe</h2>
-						<form action="#" class="subscribe-form">
-              <div class="form-group d-flex">
-                <input type="text" class="form-control rounded-left" placeholder="Enter email address">
-                <button type="submit" class="form-control submit rounded-right">Subscribe</button>
+  <div>
+    <footer class="page-footer font-small unique-color-dark">
+      <div>
+        <div class="container">
+          <!-- Grid row-->
+          <div class="row py-4 d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="container text-center text-md-left mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                <!-- Grid column -->
+                <div
+                  v-for="(colum, cindex) in colums"
+                  :key="cindex"
+                  class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"
+                >
+                  <!-- Content -->
+                  <h6 class="text-uppercase font-weight-bold">
+                    {{ colum.index }}
+                  </h6>
+                  <hr
+                    class="
+                      deep-purple
+                      accent-2
+                      mb-4
+                      mt-0
+                      d-inline-block
+                      mx-auto
+                    "
+                    style="width: 60px"
+                  />
+
+                  <div v-if="colum.index === 'Sobre la Universidad'">
+                    <p v-for="(item, indexi) in items" :key="indexi">
+                      <a :href="item.ref">{{ item.link }}</a>
+                    </p>
+                  </div>
+
+                  <div v-if="colum.index === 'Recursos Académicos'">
+                    <p v-for="(item2, indexi2) in items2" :key="indexi2">
+                      <a :href="item2.ref">{{ item2.link }}</a>
+                    </p>
+                  </div>
+
+                  <div v-if="colum.index === 'Servicios TIC'">
+                    <p v-for="(item3, indexi3) in items3" :key="indexi3">
+                      <a :href="item3.ref">{{ item3.link }}</a>
+                    </p>
+                  </div>
+
+                  <div v-if="colum.index === 'Ubicación y Contacto'">
+                    <p v-for="(item4, indexi4) in items4" :key="indexi4">
+                      <b-icon :icon="item4.icon" scale="1" />{{item4.link}}
+                    </p>
+                  </div>
+                </div>
+                <!-- Grid column -->
               </div>
-              <span class="subheading">Get digital marketing updates in your mailbox</span>
-            </form>
-					</div>
-				</div>
-				<div class="row mt-5 pt-4 border-top">
-          <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
-            
+              <!-- Grid row -->
+            </div>
+
+            <!-- Grid column -->
           </div>
-          <div class="col-md-6 col-lg-4 text-md-right">
-          	<ul class="ftco-footer-social p-0">
-              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"></span></a></li>
-            </ul>
-          </div>
+          <!-- Grid row-->
         </div>
-			</div>
-		</footer>
-</div>
+      </div>
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="https://unanleon.edu.ni/">www.unanleon.edu.ni</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
 </template>
 
-<style lang="scss">
 
-//COVER BG
-.img,
-.blog-img,
-.user-img{
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+<script>
+export default {
+  data() {
+    return {
+      Message: 'hi!',
+      colums: [
+        { index: 'Sobre la Universidad' },
+        { index: 'Recursos Académicos' },
+        { index: 'Servicios TIC' },
+        { index: 'Ubicación y Contacto' },
+      ],
+      items: [
+        { link: '¤ Misión y Visión', ref: '#' },
+        { link: '¤ Gaceta Universitaria', ref: '#' },
+        { link: '¤ Gaceta Universitaria', ref: '#' },
+        { link: '¤ Estatutos UNAN-León', ref: '#' },
+        { link: '¤ Historia de la UNAN-León', ref: '#' },
+        { link: '¤ Potencialidades de la UNAN-León', ref: '#' },
+      ],
+      items2: [
+        { link: '¤ Sistema de Bibliotecas - SIBUL', ref: '#' },
+        { link: '¤ Portal de Revistas: Científica y Literarias', ref: '#' },
+        { link: '¤ Planes de Estudios', ref: '#' },
+      ],
+      items3: [
+        { link: '¤ AULA-VIRTUAL', ref: '#' },
+        { link: '¤ Guía Telefónica', ref: '#' },
+        { link: '¤ Correo Electrónico Institucional - Office 365', ref: '#' },
+        { link: '¤ Correo Electrónico ESTUDIANTIL - Office 365', ref: '#' },
+      ],
+	  items4:[
+		  {link: ' Edificio Central, contiguo a la Iglesia La Merced. | Apartado Postal 68', icon:'geo-alt'},
+		  {link: ' Webdi.unanleon.edu.ni', icon:'inbox'},
+		  {link: ' Lun-Vie, 8am - 12m | 2pm - 6pm', icon:'calendar3'},
+		  {link: ' PBX: +505-23115013 | FAX: +505-23114970', icon:'telephone'}
+	  ]
+    }
+  },
 }
-
-.ftco-footer-social {
-	li {
-		list-style: none;
-		margin: 0 10px 0 0;
-		display: inline-block;
-		a {
-			height: 40px;
-			width: 40px;
-			display: block;
-			background: rgba($black, .05);
-			border-radius: 50%;
-			position: relative;
-			span {
-				position: absolute;
-				font-size: 20px;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			&:hover {
-				color: $white;
-			}
-		}
-	}
-}
-
-
-//FORM CONTROL
-.form-control {
-	height: 52px;
-	background: $white;
-	color: $black;
-	font-size: 18px;
-	border-radius: 0px;
-	box-shadow: none;
-	border: 1px solid rgba(0,0,0,.1);
-	&:focus, &:active {
-		outline: none !important;
-		box-shadow: none;
-	}
-}
-textarea.form-control {
-	height: inherit!important;
-}
-
-.ftco-section{
-	padding: 12em 0;
-	h2{
-		margin-bottom: 0;
-	}
-}
-
-footer{
-	padding: 7em 0;
-}
-
-//FOOTER 10
-.footer-10{
-	background: #222222;
-	padding: 0 0 4em 0;
-	.border-top, .border-bottom{
-		border-color: rgba(255,255,255,.1) !important;
-	}
-	.footer-heading{
-		font-size: 18px;
-		color: $white;
-		margin-bottom: 30px;
-	}
-	p{
-		color: rgba(255,255,255,.3);
-	}
-	a{
-		color: $primary;
-	}
-	.con{
-		&.con-1{
-			background: darken(#222222,1.5%);
-		}
-		&.con-2{
-			background: darken(#222222,2.5%);
-		}
-		&.con-3{
-			background: lighten(#222222,1%);
-		}
-	}
-	.list-unstyled{
-		li{
-			a{
-				color: rgba(255,255,255,.2);
-				&:hover{
-					color: $white;
-				}
-			}
-		}
-	}
-	.con-info{
-		.icon{
-			width: 50px;
-			height: 50px;
-			background: $primary;
-			border-radius: 50%;
-			margin: 0 auto;
-			margin-bottom: 10px;
-			span{
-				color: $white;
-				font-size: 24px;
-			}
-		}
-		span{
-			color: rgba(255,255,255,.8);
-		}
-	}
-	.subscribe-form{
-		.form-group {
-			position: relative;
-			margin-bottom: 0;
-			@include border-radius(0);
-			input {
-				background: rgba(255,255,255,1) !important;
-				border: none !important;
-				outline : none !important;
-				color: rgba(0,0,0,.3) !important;
-				font-size: 16px;
-				@include border-radius(0);
-				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&::-moz-placeholder { /* Firefox 19+ */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&:-ms-input-placeholder { /* IE 10+ */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&:-moz-placeholder { /* Firefox 18- */
-				  color: rgba(0,0,0,.3) !important;
-				}
-				&:focus{
-					outline: none !important;
-					box-shadow: none;
-				}
-			}
-			.submit{
-				color: $white !important;
-				display: block;
-				width: 130px;
-				height: 52px;
-				font-size: 16px;
-				background: $primary !important;
-				border: none;
-				@include border-radius(0);
-				&:hover, &:focus{
-					text-decoration: none !important;
-					outline: none !important;
-				}
-			}
-		}
-		.subheading{
-			display: inline-block;
-			margin-top: 5px;
-			color: rgba(255,255,255,.3);
-			font-size: 13px;
-		}
-	}
-	.ftco-footer-social{
-		li{
-			a{
-				background: rgba(255,255,255,.1);
-				color: $white;
-			}
-		}
-	}
-}
-
-</style>
+</script>
