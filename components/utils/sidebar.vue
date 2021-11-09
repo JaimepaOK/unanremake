@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div >
     <!-- // @ts-ignore -->
-    <b-button v-b-toggle.sidebar-right>Toggle Sidebar</b-button>
+    
+    <b-button v-b-toggle.sidebar-right class="showside"><b-icon icon=""></b-icon>Toggle Sidebar</b-button>
     <b-sidebar id="sidebar-right" title="Sidebar" right shadow>
       <div class="px-3 py-2">
         <p>
@@ -21,5 +22,5 @@
     .bg-light {
     background-color: #dbdada !important;
     transition: all 200ms linear;
-}
+  }
 </style>

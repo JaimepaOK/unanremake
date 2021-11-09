@@ -1,7 +1,8 @@
 <template>
   <div>
-    <Header> </Header>
     <Sidebar></Sidebar>
+    <Header> </Header>
+    
     <div>
       <Nuxt> </Nuxt>
     </div>

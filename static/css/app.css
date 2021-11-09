@@ -645,3 +645,33 @@ footer {
     margin-top: 50px;
     background-color: #1b1e22;
 }
+
+.showside {
+    display: none;
+}
+
+
+/* ------------ MEDIA QUERY - Mejorando el responsive ------------ */
+
+@media only screen and (min-width: 360px) and (max-width: 990px) {
+    .showside {
+        display: inline;
+        z-index: 9;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .showside {
+        display: inline;
+        z-index: 9;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 120px;
+        height: 30px;
+        background-color: transparent;
+    }
+}
