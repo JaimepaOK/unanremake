@@ -72,7 +72,7 @@ export default {
       ],
       items2: [
         { data: 'Consejo Universitario', ref: 'consejoU' },
-        { data: 'Reseña Histórica', ref: '#' },
+        { data: 'Reseña Histórica', ref: '' },
         { data: 'Misión y Visión', ref: '#' },
         { data: 'Gaceta Universitaria', ref: '#' },
         { data: 'Pensamiento Estratégico', ref: '#' },
@@ -87,8 +87,8 @@ export default {
         { data: 'Librería Universitaria', ref: '#' },
       ],
       items3: [
+        { data: 'Calendario Académico', ref: 'calendarpage' },
         { data: 'Sobre la Vicerrectoría Académica', ref: '#' },
-        { data: 'Calendario Académico', ref: '#' },
         { data: 'Metodología de Ingreso a la UNAN-León', ref: '#' },
         { data: 'Sistema de Admisión', ref: '#' },
         { data: 'Formatos y Documentos', ref: '#' },

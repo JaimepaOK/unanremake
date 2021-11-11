@@ -1,82 +1,45 @@
 <template>
   <div>
-    <footer class="page-footer font-small unique-color-dark">
-      <div>
+<footer class="section bg-footer">
         <div class="container">
-          <!-- Grid row-->
-          <div class="row py-4 d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="container text-center text-md-left mt-5">
-              <!-- Grid row -->
-              <div class="row mt-3">
-                <!-- Grid column -->
-                <div
-                  v-for="(colum, cindex) in colums"
-                  :key="cindex"
-                  class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"
-                >
-                  <!-- Content -->
-                  <h6 class="text-uppercase font-weight-bold">
-                    {{ colum.index }}
-                  </h6>
-                  <hr
-                    class="
-                      deep-purple
-                      accent-2
-                      mb-4
-                      mt-0
-                      d-inline-block
-                      mx-auto
-                    "
-                    style="width: 60px"
-                  />
+            <div class="row">
 
-                  <div v-if="colum.index === 'Sobre la Universidad'">
-                    <p v-for="(item, indexi) in items" :key="indexi">
-                      <a :href="item.ref">{{ item.link }}</a>
-                    </p>
-                  </div>
-
-                  <div v-if="colum.index === 'Recursos Académicos'">
-                    <p v-for="(item2, indexi2) in items2" :key="indexi2">
-                      <a :href="item2.ref">{{ item2.link }}</a>
-                    </p>
-                  </div>
-
-                  <div v-if="colum.index === 'Servicios TIC'">
-                    <p v-for="(item3, indexi3) in items3" :key="indexi3">
-                      <a :href="item3.ref">{{ item3.link }}</a>
-                    </p>
-                  </div>
-
-                  <div v-if="colum.index === 'Ubicación y Contacto'">
-                    <p v-for="(item4, indexi4) in items4" :key="indexi4">
-                      <b-icon :icon="item4.icon" scale="1" />{{item4.link}}
-                    </p>
-                  </div>
+                <div v-for="(colum,indexid) in colums" :key="indexid" class="col-lg-3">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">{{colum.index}}</h6>
+                        <ul v-if="colum.index === 'Sobre la Universidad'" class="list-unstyled footer-link mt-4" >
+                            <li v-for="(item, indexi) in items" :key="indexi"><a :href="item.ref">{{ item.link }}</a></li>
+                        </ul>
+                        <ul v-if="colum.index === 'Recursos Académicos'" class="list-unstyled footer-link mt-4" >
+                            <li v-for="(item2, indexi2) in items2" :key="indexi2"><a :href="item2.ref">{{ item2.link }}</a></li>
+                        </ul>
+                        <ul v-if="colum.index === 'Servicios TIC'" class="list-unstyled footer-link mt-4" >
+                            <li v-for="(item3, indexi3) in items3" :key="indexi3"><a :href="item3.ref">{{ item3.link }}</a></li>
+                        </ul>
+                        <ul v-if="colum.index === 'Ubicación y Contacto'" class="list-unstyled footer-link mt-4" >
+                            <li v-for="(item4, indexi4) in items4" :key="indexi4"><b-icon :icon="item4.icon" scale="1" />{{ item4.link }}</li>
+                            <Netsocial></Netsocial>
+                        </ul>
+                        
+                    </div>
                 </div>
-                <!-- Grid column -->
-              </div>
-              <!-- Grid row -->
             </div>
-
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row-->
         </div>
-      </div>
-      <div class="footer-copyright text-center py-3">
-        © 2020 Copyright:
-        <a href="https://unanleon.edu.ni/">www.unanleon.edu.ni</a>
-      </div>
-      <!-- Copyright -->
+        <div class="text-center mt-5">
+            <p class="footer-alt mb-0 f-14">© 2020 Copyright:
+        <a href="https://unanleon.edu.ni/">www.unanleon.edu.ni</a></p>
+        </div>
     </footer>
   </div>
 </template>
 
 
 <script>
+import Netsocial from './subcomponets/socialnetworks.vue'
 export default {
+  components:{
+    Netsocial,
+  },
   data() {
     return {
       Message: 'hi!',
@@ -110,8 +73,96 @@ export default {
 		  {link: ' Webdi.unanleon.edu.ni', icon:'inbox'},
 		  {link: ' Lun-Vie, 8am - 12m | 2pm - 6pm', icon:'calendar3'},
 		  {link: ' PBX: +505-23115013 | FAX: +505-23114970', icon:'telephone'}
-	  ]
+	  ],
+    icons:[
+      {wicon: 'facebook',ref:'https://www.facebook.com/BicentenariaUNANLeon'},
+      {wicon: 'twitter', ref:'https://twitter.com/UNANLeon'},
+      {wicon: 'instagram', ref:'https://www.instagram.com/unan_leon/'},
+      {wicon: 'linkedin', ref:'https://www.linkedin.com/company/bicentenariaunanleon/'}
+
+    ]
     }
   },
 }
 </script>
+
+<style>
+.bg-footer {
+    background-color: #33383c;
+    padding: 50px 0 30px;
+}
+.footer-heading {
+    letter-spacing: 2px;
+}
+
+.footer-link a {
+    color: #acacac;
+    line-height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+.footer-link a:hover {
+    color: #1bbc9b;
+}
+
+.contact-info {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.footer-social-icon {
+    font-size: 15px;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+}
+
+.facebook {
+    background-color: #4e71a8;
+    color: #ffffff;
+}
+
+.twitter {
+    background-color: #55acee;
+    color: #ffffff;
+}
+
+.instagram {
+    color: #ffffff;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.linkedin {
+    background-color: #0e76a8;
+    color: #ffffff;
+}
+
+.footer-alt {
+    color: #acacac;
+}
+
+.footer-heading {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading:after {
+    content: '';
+    width: 25px;
+    border-bottom: 1px solid #FFF;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-bottom: 1px solid #1bbc9b;
+}
+
+</style>

@@ -1,57 +1,30 @@
 <template>
-  <div class="contenido">
-    <div class="c-in">
-    <b-card 
-        v-for="(colunm, index) in colums"
-      :key="index"
-      overlay
-      class="b-card"
-      img-src="https://picsum.photos/900/250/?image=3"
-      img-alt="Card Image"
-      text-variant="white"
-      title="Image Overlay"
-      sub-title="Subtitle"
-      
-    >
-      <b-card-text>
-        Some quick example text to build on the card and make up the bulk of the
-        card's content.
-      </b-card-text>
-    </b-card>
-    </div>
-    
+  <div>
+      <div v-for="(per,index) in peoples" :key="index" class="cards">
+        <Cards :persona="per.ctname" :puesto="per.rank"/>
+      </div>
   </div>
+  
 </template>
 
-
 <script>
-export default {
-  data() {
-    return {
-      colums: [
-        { desc: 'Sobre la Universidad' },
-        { desc: 'Recursos Académicos' },
-        { desc: 'Servicios TIC' },
-        { desc: 'Ubicación y Contacto' },
-      ],
-    }
+import Cards from '../components/institucion/CUcards.vue';
+
+export default{
+  components:{
+    Cards,
   },
+  data(){
+    return{
+      peoples:[
+        {ctname:'Rectora',rank:'Dra. Flor de Maria Valle Espinoza'},
+        {ctname:'Vicerrector',rank:'Dr. Wilber Salazar Anton'},
+        {ctname:'Secretario General',rank:'M.Sc. Francisco Isabel Valladares Castillo'},
+        {ctname:'Secretario General',rank:'M.Sc. Francisco Isabel Valladares Castillo'},
+      ],
+      
+    }
+  }
+
 }
 </script>
-
-
-<style scoped>
-
-.contenido[data-v-49975355] {
-    background-color: rgb(22 0 0);
-    padding: 1px;
-}
-.c-in{
-    padding: 10px;
-    margin: 30px;
-}
-.b-card{
-    background-color: #000;
-    padding: 10px;
-}
-</style>

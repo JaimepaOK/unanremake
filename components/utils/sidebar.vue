@@ -2,7 +2,7 @@
     <div >
     <!-- // @ts-ignore -->
     
-    <b-button v-b-toggle.sidebar-right class="showside"><b-icon icon=""></b-icon>Toggle Sidebar</b-button>
+    <b-button v-b-toggle.sidebar-right class="showside sideback"><b-icon icon="list" ></b-icon></b-button>
     <b-sidebar id="sidebar-right" title="Sidebar" right shadow>
       <div class="px-3 py-2">
         <p>
@@ -18,9 +18,24 @@
 <script>
 </script>
 
-<style>
+<style scoped>
     .bg-light {
     background-color: #dbdada !important;
     transition: all 200ms linear;
   }
+
+  .sideback{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .sideback:focus, .sideback.focus{
+    color: #fff;
+    background-color: transparent; 
+    border-color: transparent;
+    
+    
+  }
+  
+
+
 </style>
