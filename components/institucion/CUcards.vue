@@ -52,7 +52,7 @@ export default {
 
 
 .c-in{
-    padding: 10px;
+    padding: 1px;
     margin: 30px;
 }
 .b-card{

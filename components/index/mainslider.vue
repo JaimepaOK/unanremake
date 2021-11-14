@@ -1,76 +1,85 @@
 <template>
   <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      fade
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width="1024"
-      img-height="120"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <!-- Text slides with image -->
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>
-
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide>
-    </b-carousel>
-
-    
+    <div class="filter" >
+      <b-carousel
+        id="carousel-fade"
+        style="text-shadow: 0px 0px 2px #000"
+        fade
+        
+        controls
+        :interval="3000"
+      >
+        <b-carousel-slide
+          img-src="https://unanleon.edu.ni/img/208aniversario.png">
+        <b-button href="#noticias" pill variant="primary" >Ver Más</b-button>
+        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
+        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
+        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
+        </b-carousel-slide>
+        <b-carousel-slide
+          img-src="https://unanleon.edu.ni/img/portada/UNANLEON_admision2022.png"
+        >
+        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
+        </b-carousel-slide>
+        <b-carousel-slide
+          
+          img-src="https://i.ibb.co/R3yJ10h/banner2.jpg"
+        >
+        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
+        </b-carousel-slide>
+      </b-carousel>
+    </div>
   </div>
-</template>
+</template> 
 
 <script>
-  export default {
-    data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
-    },
-    methods: {
-      onSlideStart() {
-        this.sliding = true
-      },
-      onSlideEnd() {
-        this.sliding = false
-      }
+export default {
+  data() {
+    return {
+      slide: 0,
+      sliding: null,
     }
-  }
+  },
+  methods: {
+    onSlideStart() {
+      this.sliding = true
+    },
+    onSlideEnd() {
+      this.sliding = false
+    },
+  },
+}
 </script>
+
+<style>
+.btn-primary {
+    color: #fff;
+    background-color: #2a3686;
+    border-color: #36418a;
+}
+.carousel-item img {
+  height: 520px !important ;
+}
+
+.carousel {
+  width: 100%;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 600px) {
+  .carousel-item img {
+   height: 320px !important ;
+  }
+  .carousel {
+    width: 100%;
+  }
+}
+.filter img{
+  filter: brightness(0.7);
+  color: #ffff;
+}
+#noticias button{
+
+}
+
+
+</style>

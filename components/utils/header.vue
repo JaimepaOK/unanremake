@@ -1,10 +1,14 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-collapse id="nav-collapse" is-nav>
+    <b-navbar toggleable="lg" type="dark" variant="info" class="heigt">
+      <b-collapse id="nav-collapse" is-nav >
         <NuxtLink to="/">
-          <img src="https://i.ibb.co/DLj4J6G/topleft22.png" alt="topleft22" border="0">
+          <img  class="mainlogo" src="./Escudo7.png" alt="topleft22" border="0">
         </NuxtLink>
+        <NuxtLink to="/" class="letras">
+        <p >Universidad Nacional Autonoma de Nicaragua,León.</p>
+        </NuxtLink>
+       
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown
@@ -22,16 +26,16 @@
                 <b-dropdown-item :href="item2.ref">
                   {{ item2.data }}
                 </b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-divider v-if="index2!==4"></b-dropdown-divider>
               </div>
             </div>
 
-            <div v-else-if="item.info === 'ACADEMICA'">
+            <div v-else-if="item.info === 'ACADÉMICA'">
               <div v-for="(item3, index3) in items3" :key="index3">
                 <b-dropdown-item :href="item3.ref">
                   {{ item3.data }}
                 </b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-divider v-if="index3!==3"></b-dropdown-divider>
               </div>
             </div>
 
@@ -40,16 +44,17 @@
                 <b-dropdown-item :href="item4.ref">
                   {{ item4.data }}
                 </b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-divider v-if="index4!==3"></b-dropdown-divider>
               </div>
             </div>
+            
 
             <div v-else-if="item.info === 'RELACIONES EXTERNAS'">
               <div v-for="(item5, index5) in items5" :key="index5">
                 <b-dropdown-item :href="item5.ref">
                   {{ item5.data }}
                 </b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-divider v-if="index5!==3"></b-dropdown-divider>
               </div>
             </div>
           </b-nav-item-dropdown>
@@ -66,88 +71,37 @@ export default {
       parentMessage: 'Parent',
       items: [
         { info: 'INSTITUCIÓN' },
-        { info: 'ACADEMICA' },
+        { info: 'ACADÉMICA' },
         { info: 'INVESTIGACIÓN y PROYECCIÓN' },
         { info: 'RELACIONES EXTERNAS' },
       ],
       items2: [
-        { data: 'Consejo Universitario', ref: 'consejoU' },
-        { data: 'Reseña Histórica', ref: '' },
-        { data: 'Misión y Visión', ref: '#' },
-        { data: 'Gaceta Universitaria', ref: '#' },
-        { data: 'Pensamiento Estratégico', ref: '#' },
-        { data: 'Estatutos UNAN-León', ref: '#' },
-        { data: 'Registro Académico', ref: '#' },
-        { data: 'Dir. Recursos Humanos', ref: '#' },
-        { data: 'Div. Auditoría Interna', ref: '#' },
-        { data: 'Div. Planificación y Evaluación Institucional', ref: '#' },
-        { data: 'División de Informática', ref: '#' },
-        { data: 'Información y Documentos', ref: '#' },
-        { data: 'Editorial Universitaria', ref: '#' },
-        { data: 'Librería Universitaria', ref: '#' },
+        { data: 'CONSEJO UNIVERSITARIO', ref: 'consejoU' },
+        { data: 'INFORMACIÓN GENERAL', ref: 'informaciongeneral' },
+        { data: 'SECRETARÍA GENERAL', ref: '#' },
+        { data: 'GESTIÓN INSTITUCIONAL', ref: '#' },
+        { data: 'ÁREA ADMINISTRATIVA Y FINANCIERA', ref: '#' },
       ],
       items3: [
-        { data: 'Calendario Académico', ref: 'calendarpage' },
-        { data: 'Sobre la Vicerrectoría Académica', ref: '#' },
-        { data: 'Metodología de Ingreso a la UNAN-León', ref: '#' },
-        { data: 'Sistema de Admisión', ref: '#' },
-        { data: 'Formatos y Documentos', ref: '#' },
-        { data: 'Facultades | Escuela | Carreras', ref: '#' },
-        { data: 'Semestre de Estudios Generales', ref: '#' },
-        { data: 'Planes de Estudios de Carreras', ref: '#' },
-        { data: 'Centros Universitarios Regionales', ref: '#' },
-        { data: 'Reglamento de Estudios de Postgrado', ref: '#' },
-        {
-          data: 'Reforma del Reglamento del Sistema de Créditos Académicos.',
-          ref: '#',
-        },
+        { data: 'CALENDARIO ACADÉMICO', ref: 'calendarpage' },
+        { data: 'INFORMACIÓN ACADÉMICA', ref: '#' },
+        { data: 'FACULTADES Y ESCUELAS', ref: '#' },
+        { data: 'REFORMAS INSTITUCIONALES', ref: '#' },
       ],
       items4: [
-        { data: 'Presentación VIPS', ref: '#' },
-        { data: 'Potencialidades de la UNAN-León', ref: '#' },
-        { data: 'Portal de Revistas Científica y Literaria', ref: '#' },
+        { data: 'INFORMACIÓN GENERAL DE VIPS', ref: '#' },
+        { data: 'CATÁLOGO Y GUÍAS', ref: '#' },
+        { data: 'CENTROS DE INVESTIGACIÓN', ref: '#' },
         {
-          data: 'Normativas Editoriales de la Revista Científica de la UNAN-León',
+          data: 'PROYECCIÓN SOCIAL',
           ref: '#',
         },
-        { data: 'Catálogo de Laboratorios de la UNAN-León.', ref: '#' },
-        {
-          data: 'Guía de Presentación de Proyectos de Investigación',
-          ref: '#',
-        },
-        {
-          data: 'Reglamento: Jornada Universitaria de Desarrollo Científico, JUDC',
-          ref: '#',
-        },
-        { data: 'Catálogo De Postgrados', ref: '#' },
-        { data: 'Políticas de Creación y Funcionamiento', ref: '#' },
-        { data: 'CIDS', ref: '#' },
-        { data: 'CISTA', ref: '#' },
-        { data: 'CIPEI', ref: '#' },
-        { data: 'CICAEA', ref: '#' },
-        { data: 'CSIG', ref: '#' },
       ],
       items5: [
-        { data: 'Presentación de Relaciones Externas', ref: '#' },
-        { data: 'Funciones - Atribuciones - Areas de Trabajo', ref: '#' },
-        { data: 'Misión, Visión, Valores y Prioridades', ref: '#' },
-        { data: 'Ejes Fundamentales de Desarrollo', ref: '#' },
-        {
-          data: 'Políticas de Cooperación y el Comité de Cooperación Externa CCE.',
-          ref: '#',
-        },
-        { data: 'Servicios Prestados - Tramites Migratorios', ref: '#' },
-        { data: 'Equipo de Trabajo y Organigrama de VRE', ref: '#' },
-        {
-          data: 'Convocatorias de Postgrado: Maestría - Doctorado - Varias',
-          ref: '#',
-        },
-        { data: 'Convenios Internacionales y Nacionales', ref: '#' },
-        { data: 'Convocatoria de Proyectos', ref: '#' },
-        { data: 'Movilidad Académica e Intercambios Estudiantiles', ref: '#' },
-        { data: 'Dirección de Protocolo', ref: '#' },
-        { data: 'Cooperación Española COOPES', ref: '#' },
-        { data: 'Redes Internacionales y Nacionales', ref: '#' },
+        { data: 'INFORMACIÓN GENERAL DE RELACIONES EXTERNAS', ref: '#' },
+        { data: 'CONVOCATORIAS DE BECAS EXTRANJERAS', ref: '#' },
+        { data: 'CONVENIOS | PROYECTOS | MOVILIDAD', ref: '#' },
+        { data: 'DIRECCIONES | REDES', ref: '#' },
       ],
     }
   },
@@ -155,14 +109,25 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
-
-img {
-  width: 120px;
-  height: auto;
+.mainlogo {
+  
+  margin-right:5px;
 }
+
+.letras{
+  font-family: 'PT Serif', serif;
+  text-align:left;
+  margin-top: 22px;
+  width: 80px;
+  color:#ffffff;
+  line-height : 15px;
+  font-size: 10px;
+}
+
 .bg-info {
-  background-color: #dbdada !important;
+  background-color: #771414 !important;
 }
 .black {
   background-color: #ffffff;

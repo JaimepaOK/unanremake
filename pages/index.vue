@@ -1,28 +1,77 @@
 <template>
 <div>
-  <div class="slider">
-    <MainSlider ></MainSlider>
+  <div>
+    <MainSlider class="sliderx">
+    </MainSlider>
+    <p id="noticias"></p>
+    
+  </div>
+  <div class="homenoticias">
+    <h2 >NOTICIAS</h2>
+    <h5>Sección de Noticias UNAN-León</h5>
+    <div v-for="(item,index) in items" :key="index">
+      <Noticias class="noticias" :title="item.titulo" :content="item.desc" :imgs="item.imgsrc" :invert="item.invert" :noticeref="item.ref" />
+    </div>
+    
+    
+  </div>
+  <div>
+    
   </div>
   
-  <Calendario/>
 </div>
 </template>
 
 <script>
 import MainSlider from '../components/index/mainslider.vue'
-import Calendario from '../components/academica/calendario.vue'
+import Noticias from '../components/index/noticias.vue'
+
+
 export default{
+  
   components:{
     MainSlider,
-    Calendario,
-  }
+    Noticias,
+  },
+  data(){
+    return{
+      items:[
+        {titulo:'Admision 2022 UNAN-León',desc:'Formulario de admisión estudiantil UNAN-León 2022',imgsrc:'https://unanleon.edu.ni/img/portada/UNANLEON_admision2022form.png', invert:false,ref:'https://admision.unanleon.edu.ni/admision'},
+        {titulo:'Congreso de Investigacion Científica',desc:'Congreso de investigación y progreso científico UNAN-León 2021',imgsrc:'https://unanleon.edu.ni/img/portada/VCongreso-CONIC.png', invert:true,ref:'https://drive.google.com/file/d/1sc0XDoRH7W_0kdX6uV7LmB6gCFoXsHzf/view'},
+        {titulo:'Maestria En Bioquímica Clínica',desc:'Programa de posgrado en Bioquímica Clínica UNAN-León 2021',imgsrc:'https://unanleon.edu.ni/img/portada/maestria-bioquimica.svg', invert:false,ref:'https://drive.google.com/file/d/1X6ujNSKnYcCSncLmcHbagPO2xyYJecUQ/view'},
+      ]
+        
+      
+    }
+  },
+  
+  
+  
 }
 </script>
 
 <style>
-.slider{
-  
-  margin: 0px 100px 0px 100px;
-  background-color: violet;
+.homenoticias{
+  position: relative;
+  z-index: 4;
 }
+.homenoticias {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.homenoticias h2 {
+  text-align: center;
+  color: var(--redunan);
+  text-shadow: 1px 1px 2px #333;
+}
+.homenoticias h5 {
+  text-align: center;
+  color: var(--redunan);
+}
+.noticias{
+  margin: 40px 60px 10px 60px;
+  box-shadow: 0 8px 10px rgba(0,0,0,0.2);
+}
+
+
 </style>

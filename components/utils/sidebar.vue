@@ -1,41 +1,86 @@
 <template>
-    <div >
-    <!-- // @ts-ignore -->
-    
-    <b-button v-b-toggle.sidebar-right class="showside sideback"><b-icon icon="list" ></b-icon></b-button>
-    <b-sidebar id="sidebar-right" title="Sidebar" right shadow>
-      <div class="px-3 py-2">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-      </div>
-    </b-sidebar>
+  <div id="App">
+    <BootstrapSidebar
+      :initial-show="initialShow"
+      :links="links"
+      :header="header"
+      :fa="true"
+      @sidebarChanged="onSidebarChanged"
+    >
+      <template v-slot:navbar>
+        <b-navbar
+          id="mainNavbar"
+          toggleable="lg"
+          type="light"
+          variant="light"
+          fixed="top"
+        >
+          <b-navbar-nav>
+            <b-nav-item> Navbar </b-nav-item>
+          </b-navbar-nav>
+        </b-navbar>
+      </template>
+
+      <template v-slot:content>
+        <b-container style="margin-top: 56px">
+          <router-view />
+        </b-container>
+      </template>
+    </BootstrapSidebar>
   </div>
 </template>
 
-<script>
-</script>
-
-<style scoped>
-    .bg-light {
-    background-color: #dbdada !important;
-    transition: all 200ms linear;
-  }
-
-  .sideback{
-    background-color: transparent;
-    border-color: transparent;
-  }
-  .sideback:focus, .sideback.focus{
-    color: #fff;
-    background-color: transparent; 
-    border-color: transparent;
-    
-    
-  }
-  
-
-
+<style lang="scss">
+/* @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap-vue/src/index.scss"; */
+@import "node_modules/vue-bootstrap-sidebar/src/scss/default-theme";
 </style>
+
+<style>
+body {
+  padding: 1rem;
+}
+</style>
+
+<script>
+import BootstrapSidebar from "vue-bootstrap-sidebar";
+export default {
+  components: {
+    BootstrapSidebar,
+  },
+  data() {
+    return {
+      initialShow: true,
+      header: "<h3>Sidebar</h3>",
+      links: [
+        { name: "Home", href: { name: "home" }, faIcon: ["fas", "home"] },
+        {
+          name: "Dropdown",
+          faIcon: ["fas", "tint"],
+          children: [
+            {
+              name: "Child Item 1",
+              href: {
+                name: "child-item-1",
+              },
+              faIcon: ["fas", "child"],
+            },
+            {
+              name: "Child Item 2",
+              href: {
+                name: "child-item-2",
+              },
+              faIcon: ["fas", "child"],
+            },
+          ],
+        },
+        { name: "About", href: { name: "about" }, faIcon: "users" },
+        { name: "Contact", href: { name: "contact" }, faIcon: "phone" },
+      ],
+    };
+  },
+  methods: {
+    onSidebarChanged() {},
+  },
+};
+</script>

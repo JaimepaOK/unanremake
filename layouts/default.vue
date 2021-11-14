@@ -1,9 +1,12 @@
 d<template>
   <div>
+    <div>
+
+    </div>
     <Sidebar></Sidebar>
       <Header class="navbarstick"></Header>
     <div>
-      <Nuxt> </Nuxt>
+      <Nuxt > </Nuxt>
     </div>
     <Footer/>
   </div>
@@ -26,7 +29,16 @@ export default {
     return{
       isactive: false,
     }
-  }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    init(mensaje){
+      
+      alert(mensaje);
+    }
+  },
 }
 </script>
 
@@ -37,6 +49,7 @@ export default {
   z-index: 9;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
+
 
 </style>
 

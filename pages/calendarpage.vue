@@ -20,7 +20,7 @@ export default{
 }
 </script>
 
-<style >
+<style scoped>
     :root {
     --blueunan: #2a3686;
     --yellowunan: #f0c803;
@@ -29,10 +29,11 @@ export default{
     
     h3{
         color:var(--redunan);
-        
+        text-shadow: 1px 1px 2px #333;
     }
     h4{
         color:var(--blueunan);
+        text-shadow: 1px 1px 2px #333;
     }
     
     .imglogo{
@@ -50,9 +51,9 @@ export default{
     .center{
         background-color: #cecece;
         padding: 60px 0px 60px 0px;
+        
     }
     .calendarp{
-        
         margin: 10px 40px 10px 40px;
         background-color: #dbdada;
         box-shadow: 0 8px 10px rgba(0,0,0,0.2);

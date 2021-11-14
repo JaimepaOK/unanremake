@@ -6,7 +6,7 @@
         :key="icindex"
         class="list-inline-item"
       >
-        <a :href="icon.ref"
+        <a :href="icon.ref" target="_blank"
           ><i :class="icon.wicon" class="footer-social-icon"
             ><b-icon :icon="icon.wicon" scale="1" /></i
         ></a>
