@@ -1,9 +1,12 @@
 <template>
 <div>
   <div>
+    {{loadstatus}}
+    {{loadedstatus}}
     <MainSlider class="sliderx">
     </MainSlider>
-    <p id="noticias"></p>
+    <p id="noticias"></p> 
+    
     
   </div>
   <div class="homenoticias">
@@ -33,17 +36,42 @@ export default{
     MainSlider,
     Noticias,
   },
+  
   data(){
     return{
       items:[
         {titulo:'Admision 2022 UNAN-León',desc:'Formulario de admisión estudiantil UNAN-León 2022',imgsrc:'https://unanleon.edu.ni/img/portada/UNANLEON_admision2022form.png', invert:false,ref:'https://admision.unanleon.edu.ni/admision'},
         {titulo:'Congreso de Investigacion Científica',desc:'Congreso de investigación y progreso científico UNAN-León 2021',imgsrc:'https://unanleon.edu.ni/img/portada/VCongreso-CONIC.png', invert:true,ref:'https://drive.google.com/file/d/1sc0XDoRH7W_0kdX6uV7LmB6gCFoXsHzf/view'},
         {titulo:'Maestria En Bioquímica Clínica',desc:'Programa de posgrado en Bioquímica Clínica UNAN-León 2021',imgsrc:'https://unanleon.edu.ni/img/portada/maestria-bioquimica.svg', invert:false,ref:'https://drive.google.com/file/d/1X6ujNSKnYcCSncLmcHbagPO2xyYJecUQ/view'},
-      ]
-        
+      ],
       
     }
   },
+  computed:{
+    loadstatus(){
+      return this.$store.getters.getloadstate
+    },
+    loadedstatus(){
+      return this.$store.getters.getloaded
+    }
+  },
+  mounted(){
+      
+  },
+    methods:{
+        trueone(){
+            this.$store.dispatch('changetrue');
+        },
+        falseone(){
+            this.$store.dispatch('changefalse');
+        },
+        loaded(){
+          this.$store.dispatch('trueloaded')
+        },
+        notloaded(){
+          this.$store.dispatch('falseloaded')
+        }
+    },
   
   
   
