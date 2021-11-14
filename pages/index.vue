@@ -1,8 +1,6 @@
 <template>
 <div>
   <div>
-    {{loadstatus}}
-    {{loadedstatus}}
     <MainSlider class="sliderx">
     </MainSlider>
     <p id="noticias"></p> 
@@ -55,15 +53,18 @@ export default{
       return this.$store.getters.getloaded
     }
   },
+  created(){
+    this.falseone();
+  },
   mounted(){
-      
+    
   },
     methods:{
         trueone(){
             this.$store.dispatch('changetrue');
         },
         falseone(){
-            this.$store.dispatch('changefalse');
+          setTimeout(() => this.$store.dispatch('changefalse'), 6500);
         },
         loaded(){
           this.$store.dispatch('trueloaded')

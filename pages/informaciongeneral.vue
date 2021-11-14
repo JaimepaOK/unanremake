@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{loadstatus}}
+        
         <Load></Load>
     </div>
 </template>
@@ -25,16 +25,19 @@ export default {
     created(){
         
     },
+    mounted(){
+        this.loaded();
+    },
     methods:{
         trueone(){
             this.$store.dispatch('changetrue');
         },
         falseone(){
-            this.$store.dispatch('changefalse');
+          setTimeout(() => this.$store.dispatch('changefalse'), 650);
         },
-        setloadedtrue(){
-            this.$store.dispatch('')
-        }
+        loaded(){
+          this.$store.dispatch('trueloaded')
+        },
     },
    
 }

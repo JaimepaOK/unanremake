@@ -1,6 +1,6 @@
 export const state = () => ({
     _load: null,
-    _loaded: true,
+    _loaded: false,
 });
 
 export const getters = {
