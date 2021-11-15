@@ -43,13 +43,13 @@ export default {
       return this.$store.getters.getloaded
     }
   },
+
   mounted(){
     if(!this.loadedstatus){
       this.trueone();
     }else{
       this.falseone();
     }
-    
   },
   
   methods:{
@@ -75,13 +75,7 @@ export default {
   z-index: 9;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
-.loading{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: auto;
-}
+
 
 </style>
 
