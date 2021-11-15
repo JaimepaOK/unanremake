@@ -25,6 +25,7 @@ export default {
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
         '~/plugins/vueboostrapincon.js',
+        '~/plugins/vue2-google-maps.js',
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -49,7 +50,8 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
-        transpile: ['vueboostrapincon']
+        transpile: ['vueboostrapincon'],
+        vendor: ['vue2-google-maps'],
     },
 
     server: {
