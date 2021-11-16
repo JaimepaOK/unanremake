@@ -5,16 +5,12 @@
         id="carousel-fade"
         style="text-shadow: 0px 0px 2px #000"
         fade
-        
         controls
         :interval="3000"
       >
         <b-carousel-slide
           img-src="https://unanleon.edu.ni/img/208aniversario.png">
         <b-button href="#noticias" pill variant="primary" >Ver Más</b-button>
-        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
-        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
-        <b-button href="#noticias" pill variant="primary">Ver Más</b-button>
         </b-carousel-slide>
         <b-carousel-slide
           img-src="https://unanleon.edu.ni/img/portada/UNANLEON_admision2022.png"
