@@ -117,8 +117,27 @@ export default {
   text-align: center;
   color: var(--redunan);
 }
+
+@media only screen and (min-width: 375px) and (max-width: 600px){
+  .noticias {
+  margin: 40px 20px 20px 20px!important;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+.homenoticias h2 {
+  text-align: center;
+  font-size: 25px;
+  color: var(--redunan);
+  text-shadow: 1px 1px 2px #333;
+}
+.homenoticias h5 {
+  font-size: 16px;
+  text-align: center;
+  color: var(--redunan);
+}
+
+}
 .noticias {
-  margin: 40px 60px 10px 60px;
+  margin: 40px 150px 10px 150px;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 </style>

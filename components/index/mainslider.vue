@@ -63,7 +63,16 @@ export default {
 
 @media only screen and (min-width: 375px) and (max-width: 600px) {
   .carousel-item img {
-   height: 320px !important ;
+   height: 280px !important ;
+  }
+  .carousel {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+  .carousel-item img {
+   height: 620px !important ;
   }
   .carousel {
     width: 100%;

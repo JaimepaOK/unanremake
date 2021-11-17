@@ -1,4 +1,5 @@
 <template>
+ <div>
   <div class="move">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -2733,7 +2734,13 @@
         </g>
       </g>
     </svg>
-    
+  </div>
+  <div class="movechargebar">
+        holii
+    </div>
+
+ 
+
   </div>
 </template>
 
@@ -2753,8 +2760,28 @@ export default {
 </script>
 
 <style scoped>
-svg{
-  margin-left: 500px;
+.move{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}
+.movechargebar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: blue;
+}
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+}
+
+@media only screen and (max-width: 600px) {
+  .move{
+    transform: scale(0.7);
+  }
+  .movechargebar{
+    transform: translateY(-85px)!important;
+  }
 }
 .red {
   background-color: red;

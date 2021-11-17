@@ -76,19 +76,7 @@ export default {
 </script>
 
 <style>
-.butt {
-    position: absolute;
-    right: 65%;
-    color: #fff;
-}
 
-.buttright {
-    position: absolute;
-    left: 65%;
-    color: #fff;
-    background-color: #2a3686;
-    border-color: #1a256d;
-}
 
 .pad{
     height: 200px;
@@ -121,33 +109,72 @@ export default {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 600px) {
+  .pad{
+    height: 120px!important;
+}
+  .headernoticias{
+    width: 100%;
+    
+  }
   .headernoticias h4 {
-    font-size: 15px;
-    margin-top:20px; 
+    font-size: 10px;
+    margin-top:20px;
+    
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 2px rgb(196, 190, 190);
 }
   .headernoticias p {
     font-size: 8px;
+    line-height: 10px; 
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 2px #333;
   }
+  /* CSS NORMAL CARTELES */
+.left-half {
+  background-color: var(--rednavbar);
+  float: left;
+  width: 61%!important;
+  height: 120px!important;
+}
+.right-half {
+  margin-left: 1%!important;   
+  background-color: #b69a1e00;
+  float: left;
+  width: 38%!important;
+  height: 120px!important;
+}
+
+/* CSS CARTELES INVERTIDOS */
+
+.left-img{
+  margin-right: 1%!important; 
+  background-color: #b6701e;
+  float: left;
+  width: 38%!important;
+  height: 120px!important;
+}
+.right-noimg{
+  background-color: var(--rednavbar);
+  float: left;
+  width: 61%!important;
+  height: 120px!important;
+}
 }
 
 /* CSS NORMAL CARTELES */
 .left-half {
   background-color: var(--rednavbar);
   float: left;
-  width: 65%;
+  width: 71%;
   height: 200px;
 }
 .right-half {
   margin-left: 1%;   
   background-color: #b69a1e00;
   float: left;
-  width: 34%;
+  width: 28%;
   height: 200px;
 }
 
@@ -157,13 +184,13 @@ export default {
   margin-right: 1%; 
   background-color: #b6701e;
   float: left;
-  width: 34%;
+  width: 28%;
   height: 200px;
 }
 .right-noimg{
   background-color: var(--rednavbar);
   float: left;
-  width: 65%;
+  width: 71%;
   height: 200px;
 }
 
