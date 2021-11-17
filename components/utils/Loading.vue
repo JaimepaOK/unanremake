@@ -2735,11 +2735,6 @@
       </g>
     </svg>
   </div>
-  <div class="movechargebar">
-        holii
-    </div>
-
- 
 
   </div>
 </template>
@@ -2751,8 +2746,14 @@ export default {
       isRed: false,
     }
   },
+  created(){
+    setTimeout(() => { this.isRed=true }, 1000);
+  },
+  beforeMount(){
+    
+  },
   mounted() {
-    setTimeout(() => { this.isRed=true }, 200);
+    
   },
   methods: {
   },
@@ -2764,13 +2765,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  
 }
 .movechargebar{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: blue;
+   
 }
 @media only screen and (min-width: 1367px) and (max-width: 1920px) {
 }

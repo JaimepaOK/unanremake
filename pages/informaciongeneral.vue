@@ -1,16 +1,18 @@
 <template>
     <div>
-        
-        <Load></Load>
+        <LoadCirculo/>
     </div>
 </template>
 
 <script>
-import Load from '../components/utils/Loading.vue'
+
+import LoadCirculo from '../components/utils/circularload.vue'
 
 export default {
     components:{
-        Load,
+        
+        LoadCirculo,
+        
     },
     data() {
         return {

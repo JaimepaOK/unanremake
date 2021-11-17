@@ -84,7 +84,7 @@ export default {
       this.$store.dispatch('changetrue')
     },
     falseone() {
-      setTimeout(() => this.$store.dispatch('changefalse'), 6500)
+      setTimeout(() => this.$store.dispatch('changefalse'), 8000)
     },
     loaded() {
       this.$store.dispatch('trueloaded')

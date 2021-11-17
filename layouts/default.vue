@@ -16,7 +16,7 @@ d<template>
 import Header from '../components/utils/header.vue'
 import Footer from '../components/utils/footer.vue'
 import Sidebar from '../components/utils/sidebar.vue'
-import LoadScreen from '../components/utils/Loading.vue'
+import LoadScreen from '../components/utils/circularload.vue'
 
 
 
@@ -58,7 +58,7 @@ export default {
       this.$store.dispatch('changetrue');
     },
     falseonedelay(){
-      setTimeout(() => this.$store.dispatch('changefalse'), 6500);
+      setTimeout(() => this.$store.dispatch('changefalse'), 7500);
     },
     falseone(){
        this.$store.dispatch('changefalse');
