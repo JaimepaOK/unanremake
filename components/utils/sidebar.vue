@@ -26,18 +26,19 @@
                   toggle-class="nav-link-custom"
                   left
                 >
-                  <b-dropdown-item v-for="(subitem, indexsub) in item.subitems" :key="indexsub">
+                  <b-dropdown-item
+                    v-for="(subitem, indexsub) in item.subitems"
+                    :key="indexsub"
+                  >
                     <NuxtLink :to="subitem.ref">
-                    {{subitem.data}}
+                      {{ subitem.data }}
                     </NuxtLink>
-                    {{indexsub}}
                   </b-dropdown-item>
                   <b-dropdown-divider/>
                 </b-nav-item-dropdown>
               </b-nav>
-            </div>
-          </b-sidebar></b-nav-item
-        >
+            </div> </b-sidebar
+        ></b-nav-item>
       </b-navbar-nav>
     </b-navbar>
   </div>
@@ -151,7 +152,7 @@ export default {
   width: 260px;
 }
 #sidebar .text-dark {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 #sidebar b,
 strong {
@@ -159,9 +160,8 @@ strong {
   font-size: 14px;
   color: white;
 }
-#sidebar a{
+#sidebar a {
   font-size: 12px;
   text-align: left;
-  
 }
 </style>

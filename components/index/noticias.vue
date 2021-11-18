@@ -10,7 +10,7 @@
               {{ content }}
             </p>
             <!--<b-button v-if="noticeref !== ''"  :href='noticeref' class="butt" pill variant="primary">Ír</b-button>-->
-            <a v-if="noticeref !== ''" :href='noticeref' target="_blank"><button class="custom-btn btn-8"><span>Leer Más</span></button></a>
+            <a  v-if="noticeref !== ''"  id="btn" :href='noticeref' target="_blank"><button  class="custom-btn btn-8"><span>Leer Más</span></button></a>
           </article>
         </div>
         <div class="right-half homechang filterimg" :style="{'--bkgImage': 'url(' + scrimg + ')'}" >
@@ -33,7 +33,7 @@
               {{ content }}
             </p>
             <!--<b-button v-if="noticeref !== ''" class="buttright" pill variant="primary">Button</b-button>-->
-            <a  v-if="noticeref !== ''" :href='noticeref' target="_blank"><button class="custom-btn-inverse btn-8"><span>Leer Más</span></button></a>
+            <a  v-if="noticeref !== ''" :href='noticeref' target="_blank"><button id="btninverse" class="custom-btn-inverse btn-8"><span>Leer Más</span></button></a>
           </article>
         </div>
       </div>
@@ -216,6 +216,13 @@ export default {
   width: 61%!important;
   height: 120px!important;
 }
+#btn{
+  
+}
+#btninverse button{
+  
+}
+  
 }
 
 /* CSS NORMAL CARTELES */
