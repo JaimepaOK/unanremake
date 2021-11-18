@@ -3,7 +3,7 @@ d<template>
     <div class="loading">
       <LoadScreen v-if="loadstatus"/>
     </div>
-    <Sidebar v-if="!loadstatus" ></Sidebar>
+    <Sidebar v-if="!loadstatus" class="navbarstick showside" ></Sidebar>
       <Header v-if="!loadstatus" class="navbarstick" ></Header>
     <div v-if="!loadstatus">
       <Nuxt > </Nuxt>
@@ -75,7 +75,15 @@ export default {
   z-index: 9;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
+.showside{
+  display: none;
+}
 
+@media only screen and (max-width: 991px) {
+    .showside {
+        display: inline;
+    }
+}
 
 </style>
 

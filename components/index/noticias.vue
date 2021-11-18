@@ -163,6 +163,61 @@ export default {
 }
 }
 
+@media only screen  and (max-width: 360px) {
+  .pad{
+    height: 100px!important;
+}
+  .headernoticias{
+    width: 100%;
+    
+  }
+  .headernoticias h4 {
+    font-size: 8px;
+    margin-top:20px;
+    
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(196, 190, 190);
+}
+  .headernoticias p {
+    font-size: 6px;
+    line-height: 8px; 
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px #333;
+  }
+  /* CSS NORMAL CARTELES */
+.left-half {
+  background-color: var(--rednavbar);
+  float: left;
+  width: 61%!important;
+  height: 100px!important;
+}
+.right-half {
+  margin-left: 1%!important;   
+  background-color: #b69a1e00;
+  float: left;
+  width: 38%!important;
+  height: 100px!important;
+}
+
+/* CSS CARTELES INVERTIDOS */
+
+.left-img{
+  margin-right: 1%!important; 
+  background-color: #b6701e;
+  float: left;
+  width: 38%!important;
+  height: 120px!important;
+}
+.right-noimg{
+  background-color: var(--rednavbar);
+  float: left;
+  width: 61%!important;
+  height: 120px!important;
+}
+}
+
 /* CSS NORMAL CARTELES */
 .left-half {
   background-color: var(--rednavbar);

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info" class="heigt">
+    <b-navbar id="mainnavbar" toggleable="lg" type="dark" variant="info" class="heigt">
       <b-collapse id="nav-collapse" is-nav >
         <NuxtLink to="/">
           <img  class="mainlogo" src="./Escudo7.png" alt="topleft22" border="0">
@@ -108,8 +108,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+
+#mainnavbar .nav-link {
+    color: white;
+    font-weight: 500;
+    margin: 10px;
+    transition: all 200ms linear;
+}
+#mainnavbar .nav-item:hover .nav-link {
+    color: var(--yellowunan) !important;
+}
+
+
+
 
 .mainlogo {
   
@@ -121,11 +135,13 @@ export default {
   text-align:left;
   margin-top: 22px;
   width: 80px;
-  color:#ffffff;
+  color:#ffffff!important;
   line-height : 15px;
   font-size: 10px;
 }
-
+#mainnavbar a:hover {
+    text-decoration: none;
+}
 .bg-info {
   background-color: #771414 !important;
 }

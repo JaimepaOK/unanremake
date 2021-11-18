@@ -1,92 +1,94 @@
 <template>
+  <div>
     <div class="scale">
-        
-        <div class="circular">
-            <div class="inner"></div>
-            <div class="outer"></div>
-            <div class="numb">
-               <Load class="scale2"/>
-            </div>
-            <div class="circle">
-               <div class="dot">
-                  <span></span>
-               </div>
-               <div class="bar left">
-                  <div class="progress"></div>
-               </div>
-               <div class="bar right">
-                  <div class="progress"></div>
-               </div>
-            </div>
-         </div>
+      <div class="circular">
+        <div class="inner"></div>
+        <div class="outer"></div>
+        <div class="numb">
+          <Load class="scale2" />
+        </div>
+        <div class="circle">
+          <div class="dot">
+            <span></span>
+          </div>
+          <div class="bar left">
+            <div class="progress"></div>
+          </div>
+          <div class="bar right">
+            <div class="progress"></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 import Load from './Loading.vue'
 export default {
-  components:{
+  components: {
     Load,
-  }
+  },
 }
 </script>
 
 <style scoped>
-
-@media only screen and (min-width: 1367px) and (max-width: 1920px){
-.scale{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  height: 700px;
-  transform: scale(6);
-}
-.scale2{
-  transform: scale(.1);
-  
-}
-}
-@media only screen and (max-width: 1366px){
-.scale{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  height: 600px;
-  transform: scale(5);
-}
-.scale2{
-  transform: scale(.1);
-  
-}
-
-}
-@media only screen and (min-width: 375px) and (max-width: 600px){
-  .scale{
-  display:flex;
-  
-  align-items: center;
-  justify-content: center;
-  
-  
-}
-  .scale2{
-    transform: scale(.1);
+/*ESCALA 1920 monitores*/
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+  .scale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    transform: scale(6);
+  }
+  .scale2 {
+    transform: scale(0.13);
   }
 }
-.circular{
+
+/*ESCALA LAPTOS*/
+@media only screen and (max-width: 1366px) {
+  .scale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    transform: scale(5);
+  }
+  .scale2 {
+    transform: scale(0.15);
+  }
+}
+/* Moviles */
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .scale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scale2 {
+    transform: scale(0.1);
+  }
+}
+
+/* CSS & Anicamcion Circular Load */
+.circular {
   height: 100px;
   width: 100px;
   position: relative;
 }
-.circular .inner, .circular .outer, .circular .circle{
+.circular .inner,
+.circular .outer,
+.circular .circle {
   position: absolute;
   z-index: 6;
   height: 100%;
   width: 100%;
   border-radius: 100%;
-  box-shadow: inset 0 1px 0 rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
 }
-.circular .inner{
+.circular .inner {
   top: 44%;
   left: 44%;
   height: 92px;
@@ -94,13 +96,13 @@ export default {
   margin: -40px 0 0 -40px;
   background-color: #dde6f0;
   border-radius: 100%;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
-.circular .circle{
+.circular .circle {
   z-index: 1;
   box-shadow: none;
 }
-.circular .numb{
+.circular .numb {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -110,7 +112,7 @@ export default {
   font-weight: 500;
   color: #4158d0;
 }
-.circular .bar{
+.circular .bar {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -118,39 +120,40 @@ export default {
   -webkit-border-radius: 100%;
   clip: rect(0px, 100px, 100px, 50px);
 }
-.circle .bar .progress{
+.circle .bar .progress {
   position: absolute;
   height: 100%;
   width: 100%;
   -webkit-border-radius: 100%;
   clip: rect(0px, 50px, 100px, 0px);
 }
-.circle .bar .progress, .dot span{
+.circle .bar .progress,
+.dot span {
   background: #4158d0;
 }
-.circle .left .progress{
+.circle .left .progress {
   z-index: 1;
-  animation: left 4s linear both;
+  animation: left 1s linear both;
 }
 @keyframes left {
-  100%{
+  100% {
     transform: rotate(180deg);
   }
 }
-.circle .right{
+.circle .right {
   z-index: 3;
   transform: rotate(180deg);
 }
-.circle .right .progress{
-  animation: right 4s linear both;
-  animation-delay: 4s;
+.circle .right .progress {
+  animation: right 1s linear both;
+  animation-delay: 1s;
 }
 @keyframes right {
-  100%{
+  100% {
     transform: rotate(180deg);
   }
 }
-.circle .dot{
+.circle .dot {
   z-index: 2;
   position: absolute;
   left: 50%;
@@ -158,7 +161,7 @@ export default {
   width: 50%;
   height: 10px;
   margin-top: -5px;
-  animation: dot 8s linear both;
+  animation: dot 2.5s linear both;
   transform-origin: 0% 50%;
 }
 .circle .dot span {
@@ -168,7 +171,7 @@ export default {
   height: 10px;
   border-radius: 100%;
 }
-@keyframes dot{
+@keyframes dot {
   0% {
     transform: rotate(-90deg);
   }
@@ -181,5 +184,4 @@ export default {
     z-index: 4;
   }
 }
-
 </style>
