@@ -13,7 +13,7 @@
           ><b-alert show><Misionvision/></b-alert></b-tab
         >
         <b-tab title="Gaceta Universitaria" lazy
-          ><b-alert show>I'm lazy mounted!</b-alert></b-tab
+          ><b-alert show><Gaceta/></b-alert></b-tab
         >
         <b-tab title="Pensamiento Estratégico" lazy
           ><b-alert show>I'm lazy mounted!</b-alert></b-tab
@@ -29,10 +29,12 @@
 <script>
 import Resumen from '../components/institucion/resumenhistorico.vue'
 import Misionvision from '../components/institucion/misionyvision.vue'
+import Gaceta from '../components/institucion/gaceta.vue'
 export default {
   components: {
     Resumen,
     Misionvision,
+    Gaceta,
   },
   data() {
     return {
