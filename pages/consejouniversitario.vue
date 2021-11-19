@@ -2,7 +2,7 @@
   <div>
     <b-container fluid="lx">
       <b-row>
-        <b-col cols="8" >
+        <b-col cols="9">
           <div class="container">
             <div class="flex">
               <div class="card">
@@ -92,7 +92,7 @@
             </div>
           </div>
         </b-col>
-        <b-col style="background-color: blue">
+        <b-col >
           <Minicalendario/>
         </b-col>
       </b-row>

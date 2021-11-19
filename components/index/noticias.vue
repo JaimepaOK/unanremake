@@ -4,7 +4,7 @@
     <div v-if="!invert" class="headernoticias">
       <div class="noticecontent pad">
         <div class="left-half">
-          <article>
+          <article class="h-100 d-flex align-items-center justify-content-center flex-column">
             <h4 >{{ title }}</h4>
             <p> 
               {{ content }}
@@ -27,7 +27,7 @@
           </article>
         </div>
         <div  class="right-noimg" >
-          <article>
+          <article class="h-100 d-flex align-items-center justify-content-center flex-column">
               <h4>{{ title }}</h4>
             <p>
               {{ content }}
@@ -97,7 +97,7 @@ export default {
 }
 .headernoticias h4 {
   font-size: 30px;
-  margin-top:20px; 
+  
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 2px rgb(196, 190, 190);

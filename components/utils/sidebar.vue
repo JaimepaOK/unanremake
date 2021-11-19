@@ -51,7 +51,7 @@ export default {
         {
           info: 'INSTITUCIÓN',
           subitems: [
-            { data: 'CONSEJO UNIVERSITARIO', ref: 'consejoU' },
+            { data: 'CONSEJO UNIVERSITARIO', ref: 'consejouniversitario' },
             { data: 'INFORMACIÓN GENERAL', ref: 'informaciongeneral' },
             { data: 'SECRETARÍA GENERAL', ref: '#' },
             { data: 'GESTIÓN INSTITUCIONAL', ref: '#' },
