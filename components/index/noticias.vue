@@ -100,7 +100,7 @@ export default {
   
   text-align: center;
   color: #fff;
-  text-shadow: 1px 1px 2px rgb(196, 190, 190);
+  
 }
 .headernoticias p {
   text-align: center;
