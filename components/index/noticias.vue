@@ -4,7 +4,7 @@
     <div v-if="!invert" class="headernoticias">
       <div class="noticecontent pad">
         <div class="left-half">
-          <article class="h-100 d-flex align-items-center justify-content-center flex-column">
+          <article class=" d-flex align-items-center justify-content-center flex-column" style="padding-top:25px">
             <h4 >{{ title }}</h4>
             <p> 
               {{ content }}
@@ -27,7 +27,7 @@
           </article>
         </div>
         <div  class="right-noimg" >
-          <article class="h-100 d-flex align-items-center justify-content-center flex-column">
+          <article class="h-100 d-flex align-items-center justify-content-center flex-column" style="padding-top:25px">
               <h4>{{ title }}</h4>
             <p>
               {{ content }}

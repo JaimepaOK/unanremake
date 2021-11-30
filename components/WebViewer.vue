@@ -17,7 +17,7 @@ export default {
             path: '../webviewer',
             initialDoc: this.url, // replace with your own PDF file
           }, this.$refs.viewer).then((instance) => {
-            // call apis here
+              
           });
     })
   }

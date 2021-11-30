@@ -1,6 +1,6 @@
 <template>
   <b-cotainer fluid="lx">
-    <div id="cards2">
+    <div id="cardsgeneral">
       <b-card class="text-dark">
         <b-card-text>
           <h2 class="text-uppercase">Misión</h2>
@@ -29,15 +29,5 @@
 </template>
 
 <style scoped>
-#cards2 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  text-align: center;
-  background-color: #eeee;
-  background-clip: border-box;
-  border: 0 px solid rgba(255, 255, 255, 0);
-  border-radius: 0.25 rem;
-}
+
 </style>

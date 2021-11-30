@@ -53,7 +53,7 @@ export default {
           subitems: [
             { data: 'CONSEJO UNIVERSITARIO', ref: 'consejouniversitario' },
             { data: 'INFORMACIÓN GENERAL', ref: 'informaciongeneral' },
-            { data: 'SECRETARÍA GENERAL', ref: '#' },
+            { data: 'SECRETARÍA GENERAL', ref: 'secretariageneral' },
             { data: 'GESTIÓN INSTITUCIONAL', ref: '#' },
             { data: 'ÁREA ADMINISTRATIVA Y FINANCIERA', ref: '#' },
           ],

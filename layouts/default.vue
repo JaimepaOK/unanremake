@@ -3,10 +3,10 @@ d<template>
     <div class="loading">
       <LoadScreen v-if="loadstatus"/>
     </div>
-    <Sidebar v-if="!loadstatus" class="navbarstick showside" ></Sidebar>
-      <Header v-if="!loadstatus" class="navbarstick" ></Header>
+      <Header v-if="!loadstatus" id="headermain" class="navbarstick showcondition"  ></Header>
     <div v-if="!loadstatus">
-      <Nuxt > </Nuxt>
+      <Nuxt></Nuxt>
+      
     </div>
     <Footer v-if="!loadstatus"/>
   </div>
@@ -15,8 +15,7 @@ d<template>
 <script>
 import Header from '../components/utils/header.vue'
 import Footer from '../components/utils/footer.vue'
-import Sidebar from '../components/utils/sidebar.vue'
-import LoadScreen from '../components/utils/circularload.vue'
+import LoadScreen from '../components/utils/Loading.vue'
 
 
 
@@ -24,7 +23,6 @@ export default {
   components: {
     Header,
     Footer,
-    Sidebar,
     LoadScreen,
   },
   
@@ -69,12 +67,23 @@ export default {
 </script>
 
 <style>
-.navbarstick{
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+.navbarstick {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    transition: 0.3s all ease;      
 }
+
+.navbarabsolute {
+    position: fixed;
+    top: 0px;
+    z-index: 9;
+    width: 100%;
+    transition: 0.3s all ease;      
+}
+
 .showside{
   display: none;
 }
@@ -82,6 +91,9 @@ export default {
 @media only screen and (max-width: 991px) {
     .showside {
         display: inline;
+    }
+    .showcondition{
+    display: none;
     }
 }
 

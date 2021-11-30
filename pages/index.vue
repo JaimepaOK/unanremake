@@ -4,6 +4,7 @@
       <MainSlider class="sliderx"> </MainSlider>
       <p id="noticias"></p>
     </div>
+    
     <div class="homenoticias">
       <h2>NOTICIAS</h2>
       <h5>Sección de Noticias UNAN-León</h5>
@@ -19,7 +20,7 @@
       </div>
     </div>
     <div v-if="maploaded" class="maps">
-        <Mapas></Mapas>
+      <Mapas></Mapas>
     </div>
   </div>
 </template>
@@ -38,7 +39,7 @@ export default {
 
   data() {
     return {
-      maploaded:false,
+      maploaded: false,
       items: [
         {
           titulo: 'Admision 2022 UNAN-León',
@@ -73,18 +74,26 @@ export default {
       return this.$store.getters.getloaded
     },
   },
+  
   created() {
     this.falseone()
   },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleSCroll)
+  },
   mounted() {
-    this.maploader();
+    this.rmbgcolor()
+    this.maploader()
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     trueone() {
       this.$store.dispatch('changetrue')
     },
     falseone() {
-      setTimeout(() => this.$store.dispatch('changefalse'), 2200)
+      setTimeout(() => this.$store.dispatch('changefalse'), 3000)
     },
     loaded() {
       this.$store.dispatch('trueloaded')
@@ -92,8 +101,29 @@ export default {
     notloaded() {
       this.$store.dispatch('falseloaded')
     },
-    maploader(){
-      setTimeout(() => {this.maploaded=true}, 500)
+    maploader() {
+      setTimeout(() => {
+        this.maploaded = true
+      }, 500)
+    },
+    handleSCroll(event) {
+      const header = document.querySelector('#mainnavbar')
+      
+
+      if (window.scrollY > 50 && !header.className.includes('v-toolbar--bgchange')) {
+        /* cambiamos el color  del background cuando sea mayor a 100px en scroll */
+        header.classList.add('bg-info')
+        header.classList.remove('bg-transparent')
+      } else if (window.scrollY < 50) {
+        header.classList.add('bg-transparent')   
+      }
+    },
+    rmbgcolor(){
+      const header = document.querySelector('#mainnavbar')
+      const hd = document.querySelector('#headermain')
+      header.classList.remove('bg-info')
+      hd.classList.remove('navbarstick')
+      hd.classList.add('navbarabsolute')
     }
   },
 }
@@ -117,25 +147,26 @@ export default {
   text-align: center;
   color: var(--redunan);
 }
+.sliderx {
+}
 
-@media only screen and (min-width: 320px) and (max-width: 600px){
+@media only screen and (min-width: 320px) and (max-width: 600px) {
   .noticias {
-  margin: 40px 20px 20px 20px!important;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-}
+    margin: 40px 20px 20px 20px !important;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
 
-.homenoticias h2 {
-  text-align: center;
-  font-size: 25px;
-  color: var(--redunan);
-  text-shadow: 1px 1px 2px #333;
-}
-.homenoticias h5 {
-  font-size: 16px;
-  text-align: center;
-  color: var(--redunan);
-}
-
+  .homenoticias h2 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--redunan);
+    text-shadow: 1px 1px 2px #333;
+  }
+  .homenoticias h5 {
+    font-size: 16px;
+    text-align: center;
+    color: var(--redunan);
+  }
 }
 .noticias {
   margin: 40px 150px 10px 150px;

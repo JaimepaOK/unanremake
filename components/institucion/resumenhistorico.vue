@@ -1,7 +1,7 @@
 <template>
   <div>
-    <b-container fluid="lx">
-      <div id="cards">
+    <b-container fluid="ls">
+      <div id="cardsgeneral">
         <b-card class="text-dark">
           <b-card-text>
             <article>
@@ -31,12 +31,9 @@
               <table>
                 <b-row class="mt-3">
                   <b-col class="text-justify">
+                    <b-img left  src="https://www.unanleon.edu.ni/media/resena_historica/historica2.jpg" fluid  alt="unanhistoria"></b-img>
                     <p>
-                      <img
-                        src="https://www.unanleon.edu.ni/media/resena_historica/historica2.jpg"
-                        alt=""
-                        align="left"
-                      />
+                       
                       El Seminario Conciliar de San Ramón Nonnato o Colegio
                       Tridentino, eregido en el año 1680 por orden del Concilio
                       de Trento, es el principal germen de la UNAN-León. El
@@ -68,13 +65,8 @@
                 </b-row>
                 <b-row>
                   <b-col class="text-justify">
+                    <b-img right src="https://www.unanleon.edu.ni/media/resena_historica/historica1.jpg"  fluid  alt="unanhistoria2"></b-img>
                     <p>
-                      <img
-                        src="https://www.unanleon.edu.ni/media/resena_historica/historica1.jpg"
-                        class="img-fluid"
-                        alt=""
-                        align="right"
-                      />
                       La Universidad se reorganizó a mediados de la década de
                       los años 1880 sobre la base del modelo napoleónico o
                       profesionalizante, bajo la influencia del esquema
@@ -105,12 +97,8 @@
                 </b-row>
                 <b-row class="text-justify">
                   <b-col>
+                    <b-img left src="https://www.unanleon.edu.ni/media/resena_historica/historica4.jpg" fluid  alt="unanhistoria2"></b-img>
                     <p>
-                      <img
-                        src="https://www.unanleon.edu.ni/media/resena_historica/historica4.jpg"
-                        alt=""
-                        align="left"
-                      />
                       El Rector Fiallos Gil hizo las gestiones pertinentes y
                       logró la autonomía universitaria el 27 de marzo de 1958
                       mediante el decreto ejecutivo número 38, acuñándose el
@@ -145,20 +133,14 @@
                       Educación Superior y su reforma del año 90 y los Estatutos
                       de 1992.
                     </h5>
-                    <img
-                      src="https://1.bp.blogspot.com/-VmbiGgay6co/X_YJsKQp3_I/AAAAAAAAA6A/STN4fWzBfOkzo6qMgwxY46bg6US5ay7jQCLcBGAsYHQ/w529-h295/Captura11.PNG"
-                      alt=""
-                    />
+                     <b-img  src="https://1.bp.blogspot.com/-VmbiGgay6co/X_YJsKQp3_I/AAAAAAAAA6A/STN4fWzBfOkzo6qMgwxY46bg6US5ay7jQCLcBGAsYHQ/w529-h295/Captura11.PNG"  fluid alt="unanhistoria3"></b-img>
                   </b-col>
                 </b-row>
                 <b-row>
                   <b-col class="text-justify">
+                    <b-img right src="https://www.unanleon.edu.ni/media/resena_historica/historica3.jpg"  fluid alt="unanhistoria3"></b-img>
                     <p>
-                      <img
-                        src="https://www.unanleon.edu.ni/media/resena_historica/historica3.jpg"
-                        alt=""
-                        align="right"
-                      />A partir de 1995, se inicia un proceso de reforma
+                      A partir de 1995, se inicia un proceso de reforma
                       universitaria que condujo a la elaboración del Proyecto
                       Educativo de la UNAN-León considerando la redefinición de
                       la Misión institucional, de los principios y valores
@@ -234,15 +216,5 @@
 </template>
 
 <style scoped>
-#cards .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  text-align: center;
-  background-color: #eeee;
-  background-clip: border-box;
-  border: 0 px solid rgba(255, 255, 255, 0);
-  border-radius: 0.25 rem;
-}
+
 </style>

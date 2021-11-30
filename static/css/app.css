@@ -28,7 +28,7 @@
 /* Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
 }
 
 *::-webkit-scrollbar-track {
@@ -45,6 +45,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 70px;
 }
 
 body {
@@ -56,7 +57,7 @@ body {
     background-position: center;
     background-repeat: repeat;
     background-size: 7%;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(233, 233, 233);
     overflow-x: hidden;
     overflow-y: scroll;
     transition: all 200ms linear;
@@ -174,9 +175,31 @@ body {
     transition: all 200ms linear;
 }
 
+#cardsgeneral .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    text-align: center;
+    background-color: rgba(243, 243, 243, 0.933);
+    background-clip: border-box;
+    border: 0 px solid rgba(255, 255, 255, 0);
+    border-radius: 0.3px;
+}
+
 
 /* #Primary style
 ================================================== */
+
+.bg-info {
+    background-color: var(--rednavbar)!important;
+    transition: 0.5s ease;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+    transition: 0.5s ease;
+}
 
 .bg-light {
     background-color: #fff !important;
@@ -211,203 +234,6 @@ p {
     transform: translate(0);
     transition: all 300ms linear;
     transition-delay: 1700ms;
-}
-
-body.hero-anime p {
-    transform: translateY(40px);
-    transition-delay: 1700ms;
-}
-
-h1 span {
-    display: inline-block;
-    transition: all 300ms linear;
-    opacity: 1;
-    transform: translate(0);
-}
-
-body.hero-anime h1 span:nth-child(1) {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-body.hero-anime h1 span:nth-child(2) {
-    opacity: 0;
-    transform: translateY(-30px);
-}
-
-body.hero-anime h1 span:nth-child(3) {
-    opacity: 0;
-    transform: translateY(-50px);
-}
-
-body.hero-anime h1 span:nth-child(4) {
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-body.hero-anime h1 span:nth-child(5) {
-    opacity: 0;
-    transform: translateY(-50px);
-}
-
-body.hero-anime h1 span:nth-child(6) {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-body.hero-anime h1 span:nth-child(7) {
-    opacity: 0;
-    transform: translateY(-40px);
-}
-
-body.hero-anime h1 span:nth-child(8) {
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-body.hero-anime h1 span:nth-child(9) {
-    opacity: 0;
-    transform: translateY(-30px);
-}
-
-body.hero-anime h1 span:nth-child(10) {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-h1 span:nth-child(1) {
-    transition-delay: 1000ms;
-}
-
-h1 span:nth-child(2) {
-    transition-delay: 700ms;
-}
-
-h1 span:nth-child(3) {
-    transition-delay: 900ms;
-}
-
-h1 span:nth-child(4) {
-    transition-delay: 800ms;
-}
-
-h1 span:nth-child(5) {
-    transition-delay: 1000ms;
-}
-
-h1 span:nth-child(6) {
-    transition-delay: 700ms;
-}
-
-h1 span:nth-child(7) {
-    transition-delay: 900ms;
-}
-
-h1 span:nth-child(8) {
-    transition-delay: 800ms;
-}
-
-h1 span:nth-child(9) {
-    transition-delay: 600ms;
-}
-
-h1 span:nth-child(10) {
-    transition-delay: 700ms;
-}
-
-body.hero-anime h1 span:nth-child(11) {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-body.hero-anime h1 span:nth-child(12) {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-body.hero-anime h1 span:nth-child(13) {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-body.hero-anime h1 span:nth-child(14) {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-body.hero-anime h1 span:nth-child(15) {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-h1 span:nth-child(11) {
-    transition-delay: 1300ms;
-}
-
-h1 span:nth-child(12) {
-    transition-delay: 1500ms;
-}
-
-h1 span:nth-child(13) {
-    transition-delay: 1400ms;
-}
-
-h1 span:nth-child(14) {
-    transition-delay: 1200ms;
-}
-
-h1 span:nth-child(15) {
-    transition-delay: 1450ms;
-}
-
-#switch,
-#circle {
-    cursor: pointer;
-    -webkit-transition: all 300ms linear;
-    transition: all 300ms linear;
-}
-
-#switch {
-    width: 60px;
-    height: 8px;
-    border: 2px solid var(--blueunan);
-    border-radius: 27px;
-    background: #000;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    opacity: 1;
-    transform: translate(0);
-    transition: all 300ms linear;
-    transition-delay: 1900ms;
-}
-
-body.hero-anime #switch {
-    opacity: 0;
-    transform: translateY(40px);
-    transition-delay: 1900ms;
-}
-
-#circle {
-    position: absolute;
-    top: -11px;
-    left: -13px;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: #000;
-}
-
-.switched {
-    border-color: #000 !important;
-    background: var(--blueunan) !important;
-}
-
-.switched #circle {
-    left: 43px;
-    box-shadow: 0 4px 4px rgba(41, 53, 134, 0.7), 0 0 0 1px rgbrgba(41, 54, 134, 0.7);
-    background: #fff;
 }
 
 .nav-item .dropdown-menu {
@@ -456,71 +282,6 @@ body.hero-anime #switch {
 .dropdown-item:focus {
     color: #fff;
     background-color: rgba(41, 54, 134, 0.7);
-}
-
-body.dark {
-    color: #fff;
-    background-color: #1f2029;
-}
-
-body.dark .navbar-brand img {
-    filter: brightness(100%);
-}
-
-body.dark h1 {
-    color: #fff;
-}
-
-body.dark h1 span {
-    transition-delay: 0ms !important;
-}
-
-body.dark p {
-    color: #fff;
-    transition-delay: 0ms !important;
-}
-
-body.dark .bg-light {
-    background-color: #14151a !important;
-}
-
-body.dark .start-header {
-    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
-}
-
-body.dark .start-header.scroll-on {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-}
-
-body.dark .nav-link {
-    color: #fff !important;
-}
-
-body.dark .nav-item.active .nav-link {
-    color: #999 !important;
-}
-
-body.dark .dropdown-menu {
-    color: #fff;
-    background-color: #1f2029;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
-}
-
-body.dark .dropdown-item {
-    color: #fff;
-}
-
-body.dark .navbar-light .navbar-toggler-icon {
-    border-bottom: 1px solid #fff;
-}
-
-body.dark .navbar-light .navbar-toggler-icon:after,
-body.dark .navbar-light .navbar-toggler-icon:before {
-    background-color: #fff;
-}
-
-body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    border-color: transparent;
 }
 
 

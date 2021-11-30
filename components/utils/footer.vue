@@ -16,7 +16,7 @@
                         <ul v-if="colum.index === 'Servicios TIC'" class="list-unstyled footer-link mt-4" >
                             <li v-for="(item3, indexi3) in items3" :key="indexi3"><a :href="item3.ref">{{ item3.link }}</a></li>
                         </ul>
-                        <ul v-if="colum.index === 'Ubicación y Contacto'" class="list-unstyled footer-link mt-4" >
+                        <ul v-if="colum.index === 'Ubicación y Contacto'" class="list-unstyled footer-link text-light mt-4" >
                             <li v-for="(item4, indexi4) in items4" :key="indexi4"><b-icon :icon="item4.icon" scale="1" />{{ item4.link }}</li>
                             <Netsocial></Netsocial>
                         </ul>
@@ -50,23 +50,21 @@ export default {
         { index: 'Ubicación y Contacto' },
       ],
       items: [
-        { link: '¤ Misión y Visión', ref: '#' },
-        { link: '¤ Gaceta Universitaria', ref: '#' },
-        { link: '¤ Gaceta Universitaria', ref: '#' },
-        { link: '¤ Estatutos UNAN-León', ref: '#' },
-        { link: '¤ Historia de la UNAN-León', ref: '#' },
-        { link: '¤ Potencialidades de la UNAN-León', ref: '#' },
+        { link: '¤ Misión y Visión', ref: 'informaciongeneral' },
+        { link: '¤ Gaceta Universitaria', ref: 'informaciongeneral' },
+        { link: '¤ Estatutos UNAN-León', ref: 'informaciongeneral' },
+        { link: '¤ Historia de la UNAN-León', ref: 'informaciongeneral' },
+        { link: '¤ Centros Universitarios Regionales', ref: 'centrosregionales' },
       ],
       items2: [
-        { link: '¤ Sistema de Bibliotecas - SIBUL', ref: '#' },
-        { link: '¤ Portal de Revistas: Científica y Literarias', ref: '#' },
-        { link: '¤ Planes de Estudios', ref: '#' },
+        { link: '¤ Sistema de Bibliotecas - SIBUL', ref: 'https://sibul.unanleon.edu.ni/' },
+        { link: '¤ Portal de Revistas: Científica y Literarias', ref: 'http://revistas.unanleon.edu.ni/' },
+        { link: '¤ Planes de Estudios', ref: 'https://portalestudiantes.unanleon.edu.ni/pensum_academico.php' },
       ],
       items3: [
-        { link: '¤ AULA-VIRTUAL', ref: '#' },
-        { link: '¤ Guía Telefónica', ref: '#' },
-        { link: '¤ Correo Electrónico Institucional - Office 365', ref: '#' },
-        { link: '¤ Correo Electrónico ESTUDIANTIL - Office 365', ref: '#' },
+        { link: '¤ AULA-VIRTUAL', ref: 'https://aulavirtual.unanleon.edu.ni/' },
+        { link: '¤ Correo Electrónico ESTUDIANTIL - Office 365', ref: 'https://estud.unanleon.edu.ni/' },
+        { link: '¤ Guia Telefónica Insitucional', ref: '#' },
       ],
 	  items4:[
 		  {link: ' Edificio Central, contiguo a la Iglesia La Merced. | Apartado Postal 68', icon:'geo-alt'},

@@ -1,12 +1,13 @@
 <template>
   <div>
-    <b-navbar id="mainnavbar" toggleable="lg" type="dark" variant="info" class="heigt">
+   
+    <b-navbar id="mainnavbar" toggleable="lg" type="dark" class="heigt bg-info">
       <b-collapse id="nav-collapse" is-nav >
         <NuxtLink to="/">
           <img  class="mainlogo" src="./Escudo7.png" alt="topleft22" border="0">
         </NuxtLink>
         <NuxtLink to="/" class="letras">
-        <p >Universidad Nacional Autonoma de Nicaragua,León.</p>
+        <p >Universidad Nacional Autónoma de Nicaragua,León.</p>
         </NuxtLink>
        
         <!-- Right aligned nav items -->
@@ -65,7 +66,11 @@
 </template>
 
 <script>
+
 export default {
+  components:{
+    
+  },
   data() {
     return {
       parentMessage: 'Parent',
@@ -78,8 +83,8 @@ export default {
       items2: [
         { data: 'CONSEJO UNIVERSITARIO', ref: 'consejouniversitario' },
         { data: 'INFORMACIÓN GENERAL', ref: 'informaciongeneral' },
-        { data: 'SECRETARÍA GENERAL', ref: '#' },
-        { data: 'GESTIÓN INSTITUCIONAL', ref: '#' },
+        { data: 'SECRETARÍA GENERAL', ref: 'secretariageneral' },
+        { data: 'GESTIÓN INSTITUCIONAL', ref: 'gestioninstitucional' },
         { data: 'ÁREA ADMINISTRATIVA Y FINANCIERA', ref: '#' },
       ],
       items3: [
@@ -122,9 +127,6 @@ export default {
     color: var(--yellowunan) !important;
 }
 
-
-
-
 .mainlogo {
   
   margin-right:5px;
@@ -142,9 +144,8 @@ export default {
 #mainnavbar a:hover {
     text-decoration: none;
 }
-.bg-info {
-  background-color: #771414 !important;
-}
+
+
 .black {
   background-color: #ffffff;
   color: #0000;

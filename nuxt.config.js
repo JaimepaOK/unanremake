@@ -9,7 +9,8 @@ export default {
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: '' },
-            { name: 'format-detection', content: 'telephone=no' }
+            { name: 'format-detection', content: 'telephone=no' },
+            { name: "viewport", content: "width=device-width, user-scalable=no" }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -28,6 +29,9 @@ export default {
         '~/plugins/vue2-google-maps.js',
     ],
 
+    serverMiddleware: {
+        '/api': '~/api'
+    },
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
 
@@ -55,6 +59,6 @@ export default {
     },
 
     server: {
-        host: '0.0.0.0' // default: localhost
+        host: 'localhost' // default: localhost
     }
 }

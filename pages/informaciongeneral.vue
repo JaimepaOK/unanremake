@@ -9,17 +9,17 @@
 
         <!-- This tabs content will not be mounted until the tab is shown -->
         <!-- and will be un-mounted when hidden -->
-        <b-tab title="Mision y Vision" lazy
+        <b-tab title="Misión y Visión" lazy
           ><b-alert show><Misionvision/></b-alert></b-tab
         >
         <b-tab title="Gaceta Universitaria" lazy
           ><b-alert show><Gaceta/></b-alert></b-tab
         >
         <b-tab title="Pensamiento Estratégico" lazy
-          ><b-alert show>I'm lazy mounted!</b-alert></b-tab
+          ><b-alert show><Pensamiento/></b-alert></b-tab
         >
         <b-tab title="Estatutos UNAN-León" lazy
-          ><b-alert show>I'm lazy mounted!</b-alert></b-tab
+          ><b-alert show><Estatutos/></b-alert></b-tab
         >
       </b-tabs>
     </div>
@@ -30,11 +30,15 @@
 import Resumen from '../components/institucion/resumenhistorico.vue'
 import Misionvision from '../components/institucion/misionyvision.vue'
 import Gaceta from '../components/institucion/gaceta.vue'
+import Pensamiento from '../components/institucion/pensamiento.vue'
+import Estatutos from '../components/institucion/estatutos.vue'
 export default {
   components: {
     Resumen,
     Misionvision,
     Gaceta,
+    Pensamiento,
+    Estatutos,
   },
   data() {
     return {
