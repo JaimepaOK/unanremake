@@ -315,7 +315,6 @@ p {
         content: "";
         border: none;
         background-color: #000;
-        vertical-align: 0;
         transition: all 200ms linear;
     }
     .dropdown-toggle[aria-expanded="true"]::after {

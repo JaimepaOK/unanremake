@@ -19,6 +19,10 @@
         />
       </div>
     </div>
+
+    <div class="redesslider">
+      <Slidernoticias/>
+    </div>
     <div v-if="maploaded" class="maps">
       <Mapas></Mapas>
     </div>
@@ -29,12 +33,14 @@
 import MainSlider from '../components/index/mainslider.vue'
 import Noticias from '../components/index/noticias.vue'
 import Mapas from '../components/index/googlemap.vue'
+import Slidernoticias from '../components/index/slidernoticias.vue' 
 
 export default {
   components: {
     MainSlider,
     Noticias,
     Mapas,
+    Slidernoticias,
   },
 
   data() {
@@ -141,13 +147,11 @@ export default {
 .homenoticias h2 {
   text-align: center;
   color: var(--redunan);
-  text-shadow: 1px 1px 2px #333;
+  text-shadow: 0.5px 0.5px 1px  #333;
 }
 .homenoticias h5 {
   text-align: center;
   color: var(--redunan);
-}
-.sliderx {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 600px) {
